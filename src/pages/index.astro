@@ -1,0 +1,288 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const site = {
+  name: "Laurenz Gebauer",
+  role: "UX Designer",
+  location: "Based in Europe",
+  summary:
+    "I turn research, interface systems, and product strategy into digital experiences that feel calm, clear, and intentional.",
+  intro:
+    "This first portfolio build translates the structure of your Figma case-study deck into a responsive website with space to grow. The copy is intentionally editable, but the layout and storytelling system are ready for real screenshots and fuller case study details.",
+  availability:
+    "Open to product design, UX research, and experience strategy collaborations.",
+  contactLinks: [
+    {
+      label: "GitHub",
+      href: "https://github.com/gelaurenz"
+    },
+    {
+      label: "Figma Deck",
+      href: "https://www.figma.com/design/M1Gy1R4VKp6XwEXmrMCcYI/Gebauer-L.--Portfolio?node-id=328-22996&t=Nkl4n2Rei7qcDgh8-1"
+    },
+    {
+      label: "Email",
+      href: "mailto:replace-with-your-email@example.com"
+    }
+  ],
+  principles: [
+    {
+      title: "Evidence over decoration",
+      body: "Every screen should make the user path more understandable, not just more attractive."
+    },
+    {
+      title: "Reduce friction early",
+      body: "The first moments of a flow should answer what happens next and why it matters."
+    },
+    {
+      title: "Polish where confidence matters",
+      body: "Micro-decisions around hierarchy, accessibility, and motion shape whether a product feels trustworthy."
+    }
+  ],
+  teaserProjects: [
+    {
+      title: "Accessibility review system",
+      description:
+        "A compact audit format for turning WCAG findings into product decisions teams can actually act on.",
+      eyebrow: "In progress"
+    },
+    {
+      title: "Mobile challenge flow",
+      description:
+        "A sharper challenge creation and progress experience focused on momentum, clarity, and status visibility.",
+      eyebrow: "Next case study"
+    }
+  ]
+};
+
+const featuredStudy = {
+  title: "School of UX Booking Experience",
+  eyebrow: "Featured case study",
+  cardSummary:
+    "A research-led case study structure focused on making complex browsing and booking decisions easier to understand.",
+  coverImage: "/images/work/case-marketplace.png",
+  coverAlt: "Sample interface showing a browsing and comparison experience",
+  tags: ["UX Research", "Journey Mapping", "Accessibility", "Usability Testing"],
+  metrics: [
+    { label: "Deck phases", value: "8" },
+    { label: "Core themes", value: "Research to handover" },
+    { label: "Focus", value: "Reduce friction in key decisions" }
+  ],
+  sections: [
+    {
+      eyebrow: "Project brief",
+      title: "Frame the challenge before showing the screens.",
+      body: "The web version starts with the problem, audience, and delivery context before it dives into screens."
+    },
+    {
+      eyebrow: "Design review",
+      title: "Use critique to show product judgment.",
+      body: "Each section makes room for friction points, design response, and the reason behind the final decisions."
+    },
+    {
+      eyebrow: "Research",
+      title: "Bring evidence into the story early.",
+      body: "Survey findings, personas, and usability observations become readable case-study proof instead of slide fragments."
+    },
+    {
+      eyebrow: "Journey mapping",
+      title: "Make the flow scannable.",
+      body: "The story turns user paths, pain points, and opportunities into a responsive, readable narrative."
+    },
+    {
+      eyebrow: "Accessibility",
+      title: "Treat inclusive design as product quality.",
+      body: "Accessibility is shown as part of the decision-making process, not a final checklist."
+    },
+    {
+      eyebrow: "Usability testing",
+      title: "Capture what changed after feedback.",
+      body: "Observations, revisions, and next-step tests become part of the outcome story."
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Laurenz Gebauer | UX Portfolio"
+  description="Responsive UX portfolio for Laurenz Gebauer featuring product thinking, research, and case-study storytelling."
+  path="/"
+>
+  <section class="hero-grid panel" data-reveal>
+    <div class="hero-copy">
+      <p class="eyebrow">UX portfolio</p>
+      <h1>{site.name} designs digital journeys that feel confident from the first screen.</h1>
+      <p class="lede">{site.summary}</p>
+      <p class="supporting-copy">{site.intro}</p>
+
+      <div class="button-row">
+        <a href="#work" class="button button-primary">See selected work</a>
+        <a href="#contact" class="button button-secondary">Start a conversation</a>
+      </div>
+
+      <ul class="hero-meta" aria-label="Portfolio details">
+        <li>{site.role}</li>
+        <li>{site.location}</li>
+        <li>{site.availability}</li>
+      </ul>
+    </div>
+
+    <div class="hero-stack">
+      <article class="feature-card feature-card-primary">
+        <p class="eyebrow">Current focus</p>
+        <h2>Research-led product storytelling for portfolios that need more than polished mockups.</h2>
+        <p>
+          The site architecture mirrors your deck: brief, review, research, journey,
+          accessibility, testing, and handover.
+        </p>
+      </article>
+
+      <div class="feature-duo">
+        <article class="feature-card feature-card-metric">
+          {featuredStudy.metrics.map((metric) => (
+            <div class="metric-block">
+              <span>{metric.value}</span>
+              <p>{metric.label}</p>
+            </div>
+          ))}
+        </article>
+
+        <article class="feature-card feature-card-note">
+          <p class="eyebrow">Design direction</p>
+          <p>
+            Clean editorial spacing, cyan accents, soft shadows, and image-led storytelling inspired by the Figma presentation.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="panel section-space" data-reveal>
+    <div class="section-intro">
+      <p class="eyebrow">Selected work</p>
+      <h2>One strong case study now, with room for the rest of the portfolio to grow into it.</h2>
+      <p>
+        We are starting with the most complete narrative already visible in the Figma deck,
+        then keeping the system modular so you can add content and screenshots over time.
+      </p>
+    </div>
+
+    <div class="project-grid">
+      <article class="project-card">
+        <div class="project-image-shell">
+          <img src={featuredStudy.coverImage} alt={featuredStudy.coverAlt} class="project-image" loading="lazy" />
+        </div>
+
+        <div class="project-body">
+          <p class="eyebrow">{featuredStudy.eyebrow}</p>
+          <h3>{featuredStudy.title}</h3>
+          <p>{featuredStudy.cardSummary}</p>
+
+          <ul class="tag-list" aria-label="Featured case study tags">
+            {featuredStudy.tags.map((tag) => <li>{tag}</li>)}
+          </ul>
+
+          <a href="/work/school-of-ux-booking/" class="text-link">
+            Read case study
+          </a>
+        </div>
+      </article>
+
+      {site.teaserProjects.map((project) => (
+        <article class="project-card">
+          <div class="project-image-shell project-image-shell-placeholder">
+            <div class="project-placeholder">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+          <div class="project-body">
+            <p class="eyebrow">{project.eyebrow}</p>
+            <h3>{project.title}</h3>
+            <p>{project.description}</p>
+            <span class="text-link muted-label">Case study coming next</span>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section id="about" class="about-grid section-space" data-reveal>
+    <article class="panel">
+      <p class="eyebrow">About</p>
+      <h2>Built for hiring teams who want the story behind the screens.</h2>
+      <p>
+        This portfolio is designed to feel premium and calm while still being practical:
+        responsive sections, strong content hierarchy, and components you can update without
+        redesigning the site every time a project evolves.
+      </p>
+      <p>
+        It is especially suited to UX, product design, accessibility, and research-heavy work
+        where the process matters as much as the interface.
+      </p>
+    </article>
+
+    <aside class="panel panel-contrast">
+      <p class="eyebrow">Quick profile</p>
+      <ul class="facts">
+        <li><strong>Role:</strong> {site.role}</li>
+        <li><strong>Base:</strong> {site.location}</li>
+        <li><strong>Format:</strong> Astro site on GitHub Pages</li>
+        <li><strong>Content model:</strong> Editable case studies powered by Markdown</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section id="approach" class="panel section-space" data-reveal>
+    <div class="section-intro">
+      <p class="eyebrow">Approach</p>
+      <h2>A portfolio should work like a product experience, not a screenshot dump.</h2>
+    </div>
+
+    <div class="principles-grid">
+      {site.principles.map((principle, index) => (
+        <article class="principle-card">
+          <span>{String(index + 1).padStart(2, "0")}</span>
+          <h3>{principle.title}</h3>
+          <p>{principle.body}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="panel case-study-preview section-space" data-reveal>
+    <div class="section-intro">
+      <p class="eyebrow">Case study structure</p>
+      <h2>The detailed pages follow the same rhythm as your Figma presentation, but made responsive.</h2>
+    </div>
+
+    <div class="timeline-grid">
+      {featuredStudy.sections.map((section) => (
+        <article class="timeline-card">
+          <p class="eyebrow">{section.eyebrow}</p>
+          <h3>{section.title}</h3>
+          <p>{section.body}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section id="contact" class="panel contact-panel section-space" data-reveal>
+    <p class="eyebrow">Contact</p>
+    <h2>Ready to turn the next version of this into your full portfolio.</h2>
+    <p>
+      The design system and first case-study structure are in place. Next, you can replace draft
+      copy, add your best screenshots, and tighten the outcomes for real applications or freelance outreach.
+    </p>
+
+    <div class="contact-links">
+      {site.contactLinks.map((link) => (
+        <a href={link.href} target={link.href.startsWith("http") ? "_blank" : undefined} rel="noreferrer">
+          {link.label}
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
