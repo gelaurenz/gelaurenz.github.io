@@ -179,6 +179,26 @@ main {
   padding: 36px;
 }
 
+.hero-grid-profile {
+  grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
+  align-items: stretch;
+}
+
+.hero-portrait-shell {
+  min-height: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(233, 241, 249, 0.9));
+}
+
+.hero-portrait {
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  object-fit: cover;
+  object-position: center;
+}
+
 .eyebrow {
   display: inline-flex;
   align-items: center;
@@ -211,6 +231,10 @@ h3 {
 h1 {
   max-width: 11ch;
   font-size: clamp(3.5rem, 7vw, 6.8rem);
+}
+
+h1 span {
+  color: var(--accent);
 }
 
 h2 {
@@ -303,6 +327,35 @@ dd {
 
 .hero-meta-roles {
   margin-top: 12px;
+}
+
+.hero-facts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.hero-fact-card {
+  padding: 18px;
+  border: 1px solid rgba(14, 23, 38, 0.08);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.76);
+}
+
+.hero-fact-card span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-fact-card p {
+  margin: 10px 0 0;
+  color: var(--text);
+  font-weight: 700;
+  line-height: 1.45;
 }
 
 .hero-meta li,
@@ -423,9 +476,69 @@ dd {
   display: grid;
 }
 
+.project-card-preview {
+  grid-template-rows: auto 1fr;
+}
+
 .project-image-shell {
   min-height: 260px;
   background: linear-gradient(135deg, rgba(82, 199, 234, 0.18), rgba(14, 23, 38, 0.02));
+}
+
+.project-poster {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-poster::before {
+  content: "";
+  position: absolute;
+  inset: 22px;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.project-poster-lean {
+  background:
+    radial-gradient(circle at top left, rgba(255, 182, 33, 0.84), transparent 24%),
+    radial-gradient(circle at right center, rgba(72, 186, 243, 0.82), transparent 18%),
+    linear-gradient(145deg, #16233c, #223861 58%, #edf4fb 58%);
+}
+
+.project-poster-game {
+  background:
+    radial-gradient(circle at 65% 18%, rgba(255, 181, 46, 0.88), transparent 12%),
+    linear-gradient(145deg, #120d14, #1a101b 42%, #7e0622 42%, #7e0622 100%);
+}
+
+.project-poster-stack {
+  position: absolute;
+  inset: auto 28px 24px 28px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  align-items: end;
+}
+
+.project-poster-stack span {
+  display: block;
+  border-radius: 26px 26px 16px 16px;
+  box-shadow: 0 18px 32px rgba(8, 13, 22, 0.28);
+}
+
+.project-poster-stack span:nth-child(1) {
+  height: 180px;
+  background: linear-gradient(180deg, #1f2e4a, #ffffff 70%);
+}
+
+.project-poster-stack span:nth-child(2) {
+  height: 220px;
+  background: linear-gradient(180deg, #1f2e4a, #ffffff 62%);
+}
+
+.project-poster-stack span:nth-child(3) {
+  height: 260px;
+  background: linear-gradient(180deg, #1d1a1b, #0f0f11 48%, #1f1f25 100%);
 }
 
 .project-image-shell-placeholder {
@@ -522,6 +635,39 @@ dd {
   padding: 24px;
 }
 
+.methods-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.method-card {
+  display: grid;
+  align-content: start;
+}
+
+.eyebrow-inline {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.eyebrow-inline::before {
+  display: none;
+}
+
+.method-card-accent {
+  color: #eff8ff;
+  background: linear-gradient(180deg, #102038, #173b57 54%, #1e8daa 100%);
+}
+
+.method-card-accent h3,
+.method-card-accent p,
+.method-card-accent .eyebrow-inline {
+  color: #eff8ff;
+}
+
+.method-card-accent .eyebrow-inline {
+  opacity: 0.84;
+}
+
 .principle-card span {
   display: inline-grid;
   place-items: center;
@@ -562,6 +708,15 @@ dd {
   margin-top: 20px;
   color: var(--text);
   font-weight: 700;
+}
+
+.current-case-study {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 0 32px 32px;
 }
 
 .case-hero {
@@ -716,6 +871,7 @@ dd {
   .project-grid,
   .about-grid,
   .principles-grid,
+  .hero-facts-grid,
   .timeline-grid,
   .metrics-strip,
   .outcome-grid,
@@ -746,6 +902,10 @@ dd {
   .hero-grid,
   .case-hero {
     padding: 24px 20px;
+  }
+
+  .hero-portrait {
+    min-height: 380px;
   }
 
   .section-intro,
@@ -787,6 +947,11 @@ dd {
   .button,
   .contact-links a {
     width: 100%;
+  }
+
+  .current-case-study {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 

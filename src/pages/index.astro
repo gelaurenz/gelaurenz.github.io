@@ -6,9 +6,11 @@ const site = {
   role: "UX & Product Designer",
   location: "Austria",
   summary:
-    "I design intuitive interfaces for products used by millions of customers, combining usability, creativity, research, and prototype thinking.",
+    "UX- & product designer, researcher, and prototype engineer designing intuitive interfaces for products that reach millions of customers.",
   intro:
-    "I hold a Master of Science in Human-Centered Computing from the University of Applied Sciences Hagenberg. My work sits at the intersection of technology, design, and human insight, with a focus on creating digital products that feel functional, clear, and engaging.",
+    "I hold a Master of Science in Human-Centered Computing from the University of Applied Sciences Hagenberg. I design engaging digital products with a focus on usability, clarity, and the kind of interaction quality that helps teams ship with confidence.",
+  mission:
+    "My aim is to create products that not only function well but also bring joy and inspiration. I am especially motivated by the intersection of technology, design, and human insight.",
   availability:
     "Open to UX design, product design, research, and prototyping collaborations.",
   contactLinks: [
@@ -29,104 +31,104 @@ const site = {
       href: "https://www.figma.com/design/M1Gy1R4VKp6XwEXmrMCcYI/Gebauer-L.--Portfolio?node-id=328-22996&t=Nkl4n2Rei7qcDgh8-1"
     }
   ],
-  principles: [
-    {
-      title: "Evidence over decoration",
-      body: "Every screen should make the user path more understandable, not just more attractive."
-    },
-    {
-      title: "Reduce friction early",
-      body: "The first moments of a flow should answer what happens next and why it matters."
-    },
-    {
-      title: "Polish where confidence matters",
-      body: "Micro-decisions around hierarchy, accessibility, and motion shape whether a product feels trustworthy."
-    }
-  ],
   profileHighlights: [
     "UX & Product Designer",
     "Researcher",
     "Prototype Engineer"
   ],
-  teaserProjects: [
-    {
-      title: "Accessibility review system",
-      description:
-        "A compact audit format for turning WCAG findings into product decisions teams can actually act on.",
-      eyebrow: "In progress"
-    },
-    {
-      title: "Mobile challenge flow",
-      description:
-        "A sharper challenge creation and progress experience focused on momentum, clarity, and status visibility.",
-      eyebrow: "Next case study"
-    }
+  aboutParagraphs: [
+    "I have been designing engaging and intuitive user interfaces for products that delight millions of customers. I bring usability, creativity, and teamwork into every project, always looking for ways to increase product maturity and make experiences easier to understand.",
+    "In this portfolio, you will find examples of previous work, design methods, and the process techniques I use to move from insight to interface. I care about turning complexity into momentum and making products feel thoughtful from the first interaction."
   ]
 };
 
-const featuredStudy = {
+const heroFacts = [
+  { label: "Education", value: "MSc Human-Centered Computing" },
+  { label: "Focus", value: "Research, product design, prototyping" },
+  { label: "Base", value: "Austria" }
+];
+
+const projectPreviews = [
+  {
+    eyebrow: "E-Commerce",
+    title: "Travel portal and companion apps",
+    description:
+      "Responsible for designing a web portal and associated Android and iOS apps used by more than 2 million customers.",
+    tags: ["Web portal", "Android + iOS", "2M+ downloads"],
+    image: "/images/work/case-marketplace.png",
+    imageAlt: "Travel booking product shown across mobile and web interfaces",
+    art: "commerce"
+  },
+  {
+    eyebrow: "Lean Design",
+    title: "Online challenge platform",
+    description:
+      "Led the development of an online platform facilitating the creation, sharing, and participation in online challenges.",
+    tags: ["Challenge flows", "Mobile-first", "Content systems"],
+    art: "lean"
+  },
+  {
+    eyebrow: "Gamification",
+    title: "Interactive tour application",
+    description:
+      "Developed and designed a mobile application for interactive tours on Android platforms with a more playful exploration model.",
+    tags: ["Android", "Gamified UX", "Interactive tours"],
+    art: "game"
+  }
+];
+
+const methods = [
+  {
+    eyebrow: "User experience",
+    title: "Usability testing",
+    body:
+      "I validate design assumptions from review cycles and stakeholder discussions through structured testing and attitudinal metrics. Depending on the project, I use SUS, SUPR-Q, UEQ, CSAT, SMEQ, and direct customer feedback to understand where the experience succeeds and where it still creates friction."
+  },
+  {
+    eyebrow: "User experience",
+    title: "Prototyping",
+    body:
+      "I create prototypes of varying fidelity to capture design concepts and test them with users early. Through prototyping, I refine requirements, reduce risk, and help teams release the right product with more clarity. My workflow regularly includes Figma and ProtoPie."
+  }
+];
+
+const currentCaseStudy = {
   title: "School of UX Booking Experience",
-  eyebrow: "Featured case study",
-  cardSummary:
-    "A research-led case study structure focused on making complex browsing and booking decisions easier to understand.",
-  coverImage: "/images/work/case-marketplace.png",
-  coverAlt: "Sample interface showing a browsing and comparison experience",
-  tags: ["UX Research", "Journey Mapping", "Accessibility", "Usability Testing"],
-  metrics: [
-    { label: "Deck phases", value: "8" },
-    { label: "Core themes", value: "Research to handover" },
-    { label: "Focus", value: "Reduce friction in key decisions" }
-  ],
-  sections: [
-    {
-      eyebrow: "Project brief",
-      title: "Frame the challenge before showing the screens.",
-      body: "The web version starts with the problem, audience, and delivery context before it dives into screens."
-    },
-    {
-      eyebrow: "Design review",
-      title: "Use critique to show product judgment.",
-      body: "Each section makes room for friction points, design response, and the reason behind the final decisions."
-    },
-    {
-      eyebrow: "Research",
-      title: "Bring evidence into the story early.",
-      body: "Survey findings, personas, and usability observations become readable case-study proof instead of slide fragments."
-    },
-    {
-      eyebrow: "Journey mapping",
-      title: "Make the flow scannable.",
-      body: "The story turns user paths, pain points, and opportunities into a responsive, readable narrative."
-    },
-    {
-      eyebrow: "Accessibility",
-      title: "Treat inclusive design as product quality.",
-      body: "Accessibility is shown as part of the decision-making process, not a final checklist."
-    },
-    {
-      eyebrow: "Usability testing",
-      title: "Capture what changed after feedback.",
-      body: "Observations, revisions, and next-step tests become part of the outcome story."
-    }
-  ]
+  eyebrow: "Current detailed case study",
+  summary:
+    "A responsive case-study build focused on research, journey clarity, accessibility, usability testing, and handover.",
+  tags: ["Research-led", "Journey mapping", "Accessibility", "Testing"],
+  href: "/work/school-of-ux-booking/"
 };
 ---
 
 <BaseLayout
   title="Laurenz Gebauer | UX Portfolio"
-  description="Responsive UX portfolio for Laurenz Gebauer featuring product thinking, research, and case-study storytelling."
+  description="Responsive UX portfolio for Laurenz Gebauer featuring product thinking, research, prototyping, and case-study storytelling."
   path="/"
 >
-  <section class="hero-grid panel" data-reveal>
+  <section class="hero-grid hero-grid-profile panel" data-reveal>
+    <div class="hero-portrait-shell">
+      <img
+        src="/profile.jpg"
+        alt="Portrait of Laurenz Gebauer"
+        class="hero-portrait"
+        loading="eager"
+      />
+    </div>
+
     <div class="hero-copy">
       <p class="eyebrow">UX portfolio</p>
-      <h1>{site.name} designs digital journeys that feel confident from the first screen.</h1>
+      <h1>
+        Hi, I&apos;m <span>{site.name}</span>
+      </h1>
       <p class="lede">{site.summary}</p>
       <p class="supporting-copy">{site.intro}</p>
+      <p class="supporting-copy">{site.mission}</p>
 
       <div class="button-row">
         <a href="#work" class="button button-primary">See selected work</a>
-        <a href="#contact" class="button button-secondary">Start a conversation</a>
+        <a href="#contact" class="button button-secondary">Hire me</a>
       </div>
 
       <ul class="hero-meta" aria-label="Portfolio details">
@@ -138,84 +140,55 @@ const featuredStudy = {
       <ul class="hero-meta hero-meta-roles" aria-label="Discipline highlights">
         {site.profileHighlights.map((item) => <li>{item}</li>)}
       </ul>
-    </div>
 
-    <div class="hero-stack">
-      <article class="feature-card feature-card-primary">
-        <p class="eyebrow">Current focus</p>
-        <h2>Research-led product storytelling for portfolios that need more than polished mockups.</h2>
-        <p>
-          The site architecture mirrors your deck: brief, review, research, journey,
-          accessibility, testing, and handover.
-        </p>
-      </article>
-
-      <div class="feature-duo">
-        <article class="feature-card feature-card-metric">
-          {featuredStudy.metrics.map((metric) => (
-            <div class="metric-block">
-              <span>{metric.value}</span>
-              <p>{metric.label}</p>
-            </div>
-          ))}
-        </article>
-
-        <article class="feature-card feature-card-note">
-          <p class="eyebrow">Design direction</p>
-          <p>
-            Clean editorial spacing, cyan accents, soft shadows, and image-led storytelling inspired by the Figma presentation.
-          </p>
-        </article>
+      <div class="hero-facts-grid">
+        {heroFacts.map((fact) => (
+          <article class="hero-fact-card">
+            <span>{fact.label}</span>
+            <p>{fact.value}</p>
+          </article>
+        ))}
       </div>
     </div>
   </section>
 
   <section id="work" class="panel section-space" data-reveal>
     <div class="section-intro">
-      <p class="eyebrow">Selected work</p>
-      <h2>One strong case study now, with room for the rest of the portfolio to grow into it.</h2>
+      <p class="eyebrow">Projects</p>
+      <h2>Product work across commerce, challenge systems, and gamified mobile experiences.</h2>
       <p>
-        We are starting with the most complete narrative already visible in the Figma deck,
-        then keeping the system modular so you can add content and screenshots over time.
+        These previews are drawn from your portfolio material and show the breadth of your work:
+        large-scale commerce flows, lean platform design, and interaction-heavy mobile concepts.
       </p>
     </div>
 
-    <div class="project-grid">
-      <article class="project-card">
-        <div class="project-image-shell">
-          <img src={featuredStudy.coverImage} alt={featuredStudy.coverAlt} class="project-image" loading="lazy" />
-        </div>
-
-        <div class="project-body">
-          <p class="eyebrow">{featuredStudy.eyebrow}</p>
-          <h3>{featuredStudy.title}</h3>
-          <p>{featuredStudy.cardSummary}</p>
-
-          <ul class="tag-list" aria-label="Featured case study tags">
-            {featuredStudy.tags.map((tag) => <li>{tag}</li>)}
-          </ul>
-
-          <a href="/work/school-of-ux-booking/" class="text-link">
-            Read case study
-          </a>
-        </div>
-      </article>
-
-      {site.teaserProjects.map((project) => (
-        <article class="project-card">
-          <div class="project-image-shell project-image-shell-placeholder">
-            <div class="project-placeholder">
-              <span></span>
-              <span></span>
-              <span></span>
+    <div class="project-grid project-grid-featured">
+      {projectPreviews.map((project) => (
+        <article class="project-card project-card-preview">
+          {project.image ? (
+            <div class="project-image-shell">
+              <img src={project.image} alt={project.imageAlt ?? ""} class="project-image" loading="lazy" />
             </div>
-          </div>
+          ) : (
+            <div class={`project-image-shell project-poster project-poster-${project.art}`}>
+              <div class="project-poster-stack">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          )}
 
           <div class="project-body">
             <p class="eyebrow">{project.eyebrow}</p>
             <h3>{project.title}</h3>
             <p>{project.description}</p>
-            <span class="text-link muted-label">Case study coming next</span>
+
+            <ul class="tag-list" aria-label={`${project.title} tags`}>
+              {project.tags.map((tag) => <li>{tag}</li>)}
+            </ul>
+
+            <span class="text-link muted-label">Detailed case study coming next</span>
           </div>
         </article>
       ))}
@@ -225,16 +198,10 @@ const featuredStudy = {
   <section id="about" class="about-grid section-space" data-reveal>
     <article class="panel">
       <p class="eyebrow">About</p>
-      <h2>Built for hiring teams who want the story behind the screens.</h2>
-      <p>
-        I bring together usability, creativity, and teamwork to shape products that are both
-        intuitive and commercially grounded. I am especially motivated by projects that need
-        clarity under complexity, from research synthesis through to detailed interface decisions.
-      </p>
-      <p>
-        In this portfolio, I showcase techniques and design processes I use to raise UX maturity,
-        improve user understanding, and create experiences that feel thoughtful from the first interaction.
-      </p>
+      <h2>Creating products that combine usability, clarity, and joy.</h2>
+      {site.aboutParagraphs.map((paragraph) => (
+        <p>{paragraph}</p>
+      ))}
     </article>
 
     <aside class="panel panel-contrast">
@@ -243,43 +210,55 @@ const featuredStudy = {
         <li><strong>Role:</strong> {site.role}</li>
         <li><strong>Base:</strong> {site.location}</li>
         <li><strong>Education:</strong> MSc in Human-Centered Computing</li>
-        <li><strong>Format:</strong> Astro site on GitHub Pages</li>
         <li><strong>Strengths:</strong> Research, interaction design, prototyping</li>
+        <li><strong>Mindset:</strong> Clear systems, engaging flows, better decisions</li>
       </ul>
     </aside>
   </section>
 
   <section id="approach" class="panel section-space" data-reveal>
     <div class="section-intro">
-      <p class="eyebrow">Approach</p>
-      <h2>A portfolio should work like a product experience, not a screenshot dump.</h2>
+      <p class="eyebrow">Methods</p>
+      <h2>Research, testing, and prototyping are part of the product work, not a separate layer.</h2>
     </div>
 
-    <div class="principles-grid">
-      {site.principles.map((principle, index) => (
-        <article class="principle-card">
+    <div class="principles-grid methods-grid">
+      {methods.map((method, index) => (
+        <article class="principle-card method-card">
           <span>{String(index + 1).padStart(2, "0")}</span>
-          <h3>{principle.title}</h3>
-          <p>{principle.body}</p>
+          <p class="eyebrow eyebrow-inline">{method.eyebrow}</p>
+          <h3>{method.title}</h3>
+          <p>{method.body}</p>
         </article>
       ))}
+
+      <article class="principle-card method-card method-card-accent">
+        <span>03</span>
+        <p class="eyebrow eyebrow-inline">Portfolio build</p>
+        <h3>Case studies that read like product stories.</h3>
+        <p>
+          The site is structured to show context, design reasoning, testing, accessibility, and
+          implementation readiness instead of relying on static mockups alone.
+        </p>
+      </article>
     </div>
   </section>
 
   <section class="panel case-study-preview section-space" data-reveal>
     <div class="section-intro">
-      <p class="eyebrow">Case study structure</p>
-      <h2>The detailed pages follow the same rhythm as your Figma presentation, but made responsive.</h2>
+      <p class="eyebrow">{currentCaseStudy.eyebrow}</p>
+      <h2>{currentCaseStudy.title}</h2>
+      <p>{currentCaseStudy.summary}</p>
     </div>
 
-    <div class="timeline-grid">
-      {featuredStudy.sections.map((section) => (
-        <article class="timeline-card">
-          <p class="eyebrow">{section.eyebrow}</p>
-          <h3>{section.title}</h3>
-          <p>{section.body}</p>
-        </article>
-      ))}
+    <div class="current-case-study">
+      <ul class="tag-list" aria-label="Current case study tags">
+        {currentCaseStudy.tags.map((tag) => <li>{tag}</li>)}
+      </ul>
+
+      <a href={currentCaseStudy.href} class="button button-primary">
+        Read the current case study
+      </a>
     </div>
   </section>
 
@@ -287,8 +266,8 @@ const featuredStudy = {
     <p class="eyebrow">Contact</p>
     <h2>Hire me.</h2>
     <p>
-      An experience designer with a strong interest in human insight and interaction design, ready
-      to contribute to products that need both clarity and momentum.
+      An experience designer with a dream to use the power of human insight and interactions to
+      spark the full creative potential of every project I am involved in.
     </p>
 
     <div class="contact-links">
@@ -301,6 +280,8 @@ const featuredStudy = {
 
     <p class="contact-signoff">
       Gebauer Laurenz
+      <br />
+      UX- & Product Designer
       <br />
       +43 660 642 232 8
       <br />
