@@ -1,0 +1,155 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const study = {
+  title: "School of UX Booking Experience",
+  eyebrow: "Featured case study",
+  subtitle:
+    "Turning a fixed-slide portfolio into a clear product story about research, flow clarity, and confidence at decision-heavy moments.",
+  summary:
+    "This draft case study is shaped from the Figma presentation structure you already have: project brief, design review, research, journey mapping, accessibility, testing, and handover. It gives you a responsive storytelling frame that you can keep enriching with your own screenshots and outcomes.",
+  client: "School of UX",
+  role: "UX Designer",
+  duration: "6 week project",
+  team: "Solo design with tutor and stakeholder feedback",
+  coverImage: "/images/work/case-marketplace.png",
+  coverAlt: "Sample interface showing a browsing and comparison experience",
+  metrics: [
+    { label: "Deck phases", value: "8" },
+    { label: "Core themes", value: "Research to handover" },
+    { label: "Focus", value: "Reduce friction in key decisions" }
+  ],
+  outcomes: [
+    "Built a portfolio case-study format that mirrors your process instead of just showing final screens.",
+    "Created room for annotated screenshots, research evidence, and testing outcomes on any screen size.",
+    "Turned a slide-based narrative into reusable web sections you can extend with real project detail."
+  ],
+  sections: [
+    {
+      eyebrow: "Project brief",
+      title: "Frame the challenge before showing the screens.",
+      body: "The Figma deck already has a strong project rhythm, so the web version starts with the problem, audience, and delivery context. Instead of asking people to decode isolated slides, the case study now explains what the product needed to solve and why that challenge mattered.",
+      note: "Swap this block with the final project brief once you are ready to publish the real business context.",
+      image: "/images/work/case-landing.png",
+      imageAlt: "Sample landing page and service entry view"
+    },
+    {
+      eyebrow: "Design review",
+      title: "Use visual critique to reveal what changed.",
+      body: "The review section is designed for before-and-after thinking: what was noisy, what interrupted flow, and where trust or clarity broke down. This makes it easier to show product judgment, not just polished interface output.",
+      note: "Great place for annotated screenshots from your Figma boards.",
+      image: "/images/work/case-filter.png",
+      imageAlt: "Sample filter and consent flow"
+    },
+    {
+      eyebrow: "User research",
+      title: "Bring evidence into the story early.",
+      body: "Your existing deck already signals research depth through survey findings, persona thinking, and average user profiling. On the site, those signals become readable content blocks that can scale from one insight to a fuller synthesis without breaking the layout."
+    },
+    {
+      eyebrow: "Journey mapping",
+      title: "Make the user path scannable.",
+      body: "Journey work becomes more persuasive on the web when each step is paired with pain points and design response. This layout gives you a way to show the current path, the friction moments, and the design opportunities side by side."
+    },
+    {
+      eyebrow: "Accessibility",
+      title: "Treat inclusive design as product quality.",
+      body: "Accessibility is positioned as a core part of the work, not an afterthought. The section supports checklists, audit findings, and proof that your decisions improve clarity for a wider range of users."
+    },
+    {
+      eyebrow: "Usability testing",
+      title: "Capture what changed after real feedback.",
+      body: "Testing sections are set up for scenario walkthroughs, observation highlights, and iteration notes. This lets you explain what users struggled with, what you adjusted, and what you would validate next."
+    },
+    {
+      eyebrow: "Handover",
+      title: "Close with implementation readiness.",
+      body: "The final block is designed for design handover, stakeholder sign-off, and next-step recommendations. It gives the case study a product ending instead of stopping at static visuals."
+    }
+  ]
+};
+---
+
+<BaseLayout title={`${study.title} | Laurenz Gebauer`} description={study.summary} path="/work/school-of-ux-booking/">
+  <section class="case-hero panel" data-reveal>
+    <div class="case-hero-copy">
+      <p class="eyebrow">{study.eyebrow}</p>
+      <h1>{study.title}</h1>
+      <p class="lede">{study.subtitle}</p>
+      <p class="supporting-copy">{study.summary}</p>
+
+      <ul class="case-summary-list" aria-label="Case study facts">
+        <li><strong>Client</strong><span>{study.client}</span></li>
+        <li><strong>Role</strong><span>{study.role}</span></li>
+        <li><strong>Duration</strong><span>{study.duration}</span></li>
+        <li><strong>Team</strong><span>{study.team}</span></li>
+      </ul>
+    </div>
+
+    <div class="case-hero-visual">
+      <img src={study.coverImage} alt={study.coverAlt} loading="eager" />
+    </div>
+  </section>
+
+  <section class="metrics-strip section-space" data-reveal>
+    {study.metrics.map((metric) => (
+      <article class="metric-card panel">
+        <span>{metric.value}</span>
+        <p>{metric.label}</p>
+      </article>
+    ))}
+  </section>
+
+  <section class="section-space panel" data-reveal>
+    <div class="section-intro">
+      <p class="eyebrow">Outcomes</p>
+      <h2>Why this project belongs in the portfolio.</h2>
+    </div>
+
+    <div class="outcome-grid">
+      {study.outcomes.map((outcome) => (
+        <article class="outcome-card">
+          <p>{outcome}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section-space case-sections" data-reveal>
+    {study.sections.map((section, index) => (
+      <article class={`case-section panel ${index % 2 === 0 ? "case-section-split" : "case-section-split reverse"}`}>
+        <div class="case-section-copy">
+          <p class="eyebrow">{section.eyebrow}</p>
+          <h2>{section.title}</h2>
+          <p>{section.body}</p>
+          {section.note && <aside class="inline-note">{section.note}</aside>}
+        </div>
+
+        {section.image ? (
+          <div class="case-section-visual">
+            <img src={section.image} alt={section.imageAlt ?? ""} loading="lazy" />
+          </div>
+        ) : (
+          <div class="case-section-visual case-section-visual-placeholder">
+            <div class="placeholder-note">
+              <strong>Drop in your supporting asset here</strong>
+              <p>
+                Replace this placeholder with a screenshot, annotation board, journey map,
+                or usability testing artifact from the Figma case study.
+              </p>
+            </div>
+          </div>
+        )}
+      </article>
+    ))}
+  </section>
+
+  <section class="panel prose-panel section-space" data-reveal>
+    <p class="eyebrow">Working draft note</p>
+    <p>
+      This page is intentionally written as a high-quality draft so you can replace content section by
+      section instead of rewriting the entire site later. As you add screenshots and stronger outcomes,
+      the structure will hold up without needing a layout overhaul.
+    </p>
+  </section>
+</BaseLayout>
