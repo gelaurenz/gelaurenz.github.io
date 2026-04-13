@@ -394,7 +394,7 @@ dd {
 .project-grid,
 .principles-grid,
 .timeline-grid,
-outcome-grid {
+.outcome-grid {
   display: grid;
   gap: 18px;
   padding: 0 32px 32px;
