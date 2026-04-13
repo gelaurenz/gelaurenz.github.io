@@ -3,26 +3,30 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 const site = {
   name: "Laurenz Gebauer",
-  role: "UX Designer",
-  location: "Based in Europe",
+  role: "UX & Product Designer",
+  location: "Austria",
   summary:
-    "I turn research, interface systems, and product strategy into digital experiences that feel calm, clear, and intentional.",
+    "I design intuitive interfaces for products used by millions of customers, combining usability, creativity, research, and prototype thinking.",
   intro:
-    "This first portfolio build translates the structure of your Figma case-study deck into a responsive website with space to grow. The copy is intentionally editable, but the layout and storytelling system are ready for real screenshots and fuller case study details.",
+    "I hold a Master of Science in Human-Centered Computing from the University of Applied Sciences Hagenberg. My work sits at the intersection of technology, design, and human insight, with a focus on creating digital products that feel functional, clear, and engaging.",
   availability:
-    "Open to product design, UX research, and experience strategy collaborations.",
+    "Open to UX design, product design, research, and prototyping collaborations.",
   contactLinks: [
+    {
+      label: "Email",
+      href: "mailto:laurenz.gebauer@gmx.at"
+    },
+    {
+      label: "Call",
+      href: "tel:+436606422328"
+    },
     {
       label: "GitHub",
       href: "https://github.com/gelaurenz"
     },
     {
-      label: "Figma Deck",
+      label: "Figma Portfolio",
       href: "https://www.figma.com/design/M1Gy1R4VKp6XwEXmrMCcYI/Gebauer-L.--Portfolio?node-id=328-22996&t=Nkl4n2Rei7qcDgh8-1"
-    },
-    {
-      label: "Email",
-      href: "mailto:replace-with-your-email@example.com"
     }
   ],
   principles: [
@@ -38,6 +42,11 @@ const site = {
       title: "Polish where confidence matters",
       body: "Micro-decisions around hierarchy, accessibility, and motion shape whether a product feels trustworthy."
     }
+  ],
+  profileHighlights: [
+    "UX & Product Designer",
+    "Researcher",
+    "Prototype Engineer"
   ],
   teaserProjects: [
     {
@@ -124,6 +133,10 @@ const featuredStudy = {
         <li>{site.role}</li>
         <li>{site.location}</li>
         <li>{site.availability}</li>
+      </ul>
+
+      <ul class="hero-meta hero-meta-roles" aria-label="Discipline highlights">
+        {site.profileHighlights.map((item) => <li>{item}</li>)}
       </ul>
     </div>
 
@@ -214,13 +227,13 @@ const featuredStudy = {
       <p class="eyebrow">About</p>
       <h2>Built for hiring teams who want the story behind the screens.</h2>
       <p>
-        This portfolio is designed to feel premium and calm while still being practical:
-        responsive sections, strong content hierarchy, and components you can update without
-        redesigning the site every time a project evolves.
+        I bring together usability, creativity, and teamwork to shape products that are both
+        intuitive and commercially grounded. I am especially motivated by projects that need
+        clarity under complexity, from research synthesis through to detailed interface decisions.
       </p>
       <p>
-        It is especially suited to UX, product design, accessibility, and research-heavy work
-        where the process matters as much as the interface.
+        In this portfolio, I showcase techniques and design processes I use to raise UX maturity,
+        improve user understanding, and create experiences that feel thoughtful from the first interaction.
       </p>
     </article>
 
@@ -229,8 +242,9 @@ const featuredStudy = {
       <ul class="facts">
         <li><strong>Role:</strong> {site.role}</li>
         <li><strong>Base:</strong> {site.location}</li>
+        <li><strong>Education:</strong> MSc in Human-Centered Computing</li>
         <li><strong>Format:</strong> Astro site on GitHub Pages</li>
-        <li><strong>Content model:</strong> Editable case studies powered by Markdown</li>
+        <li><strong>Strengths:</strong> Research, interaction design, prototyping</li>
       </ul>
     </aside>
   </section>
@@ -271,10 +285,10 @@ const featuredStudy = {
 
   <section id="contact" class="panel contact-panel section-space" data-reveal>
     <p class="eyebrow">Contact</p>
-    <h2>Ready to turn the next version of this into your full portfolio.</h2>
+    <h2>Hire me.</h2>
     <p>
-      The design system and first case-study structure are in place. Next, you can replace draft
-      copy, add your best screenshots, and tighten the outcomes for real applications or freelance outreach.
+      An experience designer with a strong interest in human insight and interaction design, ready
+      to contribute to products that need both clarity and momentum.
     </p>
 
     <div class="contact-links">
@@ -284,5 +298,13 @@ const featuredStudy = {
         </a>
       ))}
     </div>
+
+    <p class="contact-signoff">
+      Gebauer Laurenz
+      <br />
+      +43 660 642 232 8
+      <br />
+      laurenz.gebauer@gmx.at
+    </p>
   </section>
 </BaseLayout>

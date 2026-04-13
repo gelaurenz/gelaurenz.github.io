@@ -301,6 +301,10 @@ dd {
   margin: 24px 0 0;
 }
 
+.hero-meta-roles {
+  margin-top: 12px;
+}
+
 .hero-meta li,
 .tag-list li {
   padding: 10px 14px;
@@ -552,6 +556,12 @@ dd {
 
 .contact-panel p:last-of-type {
   max-width: 56ch;
+}
+
+.contact-signoff {
+  margin-top: 20px;
+  color: var(--text);
+  font-weight: 700;
 }
 
 .case-hero {
