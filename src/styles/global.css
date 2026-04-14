@@ -794,6 +794,25 @@ dd {
   text-align: center;
 }
 
+.contact-avatar-shell {
+  width: 132px;
+  height: 132px;
+  margin: 0 auto 18px;
+  padding: 6px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(118, 222, 243, 0.9), rgba(215, 247, 252, 0.95));
+  box-shadow: 0 20px 38px rgba(82, 199, 234, 0.24);
+}
+
+.contact-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  object-fit: cover;
+  object-position: center top;
+  border: 4px solid rgba(255, 255, 255, 0.94);
+}
+
 .contact-panel h2,
 .contact-panel p {
   margin-left: auto;
