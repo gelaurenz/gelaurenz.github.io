@@ -459,6 +459,136 @@ dd {
   line-height: 1.45;
 }
 
+.profile-showcase {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.78fr) minmax(0, 1.22fr);
+  gap: 24px;
+  padding: 32px;
+}
+
+.profile-showcase-media,
+.profile-showcase-copy {
+  display: grid;
+  gap: 18px;
+}
+
+.profile-photo-frame {
+  position: relative;
+  overflow: hidden;
+  min-height: 430px;
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  border-radius: 30px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0)),
+    linear-gradient(145deg, #162235, #234c69 58%, #71daef 100%);
+  box-shadow: 0 22px 50px rgba(14, 23, 38, 0.16);
+}
+
+.profile-photo-frame::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -18% auto;
+  width: 240px;
+  height: 240px;
+  border-radius: 36px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.02));
+  transform: rotate(32deg);
+}
+
+.profile-photo {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  min-height: 430px;
+  object-fit: cover;
+  object-position: center 18%;
+}
+
+.profile-note-card,
+.profile-snapshot-card,
+.impact-card,
+.highlight-card {
+  border: 1px solid rgba(14, 23, 38, 0.08);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.profile-note-card {
+  padding: 24px;
+  background:
+    radial-gradient(circle at top right, rgba(82, 199, 234, 0.18), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(244, 249, 255, 0.88));
+}
+
+.profile-note-card p:last-child {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.profile-showcase-copy h2 {
+  max-width: 11ch;
+}
+
+.profile-snapshot-grid,
+.impact-strip,
+.highlight-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.profile-snapshot-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.profile-snapshot-card,
+.impact-card,
+.highlight-card {
+  padding: 22px;
+}
+
+.profile-snapshot-card span,
+.impact-card p {
+  color: var(--muted);
+}
+
+.profile-snapshot-card span {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.profile-snapshot-card p {
+  margin: 12px 0 0;
+  color: var(--text);
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.impact-strip {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.impact-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(236, 246, 255, 0.88));
+}
+
+.impact-card strong {
+  display: block;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  color: var(--text);
+}
+
+.impact-card p {
+  margin: 8px 0 0;
+  line-height: 1.55;
+}
+
 .hero-meta li,
 .tag-list li {
   padding: 10px 14px;
@@ -790,14 +920,72 @@ dd {
   padding: 22px;
 }
 
+.highlight-band .section-intro h2 {
+  max-width: 13ch;
+}
+
+.highlight-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: 0 32px 32px;
+}
+
+.highlight-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.highlight-card::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -18% auto;
+  width: 180px;
+  height: 180px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(82, 199, 234, 0.16), transparent 68%);
+}
+
+.highlight-card h3,
+.highlight-card p {
+  position: relative;
+  z-index: 1;
+}
+
+.highlight-card p:last-child {
+  color: var(--muted);
+}
+
 .contact-panel {
-  text-align: center;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+  gap: 24px;
+  align-items: center;
+  text-align: left;
+}
+
+.contact-copy,
+.contact-profile-card {
+  display: grid;
+  gap: 16px;
+}
+
+.contact-copy {
+  max-width: 44rem;
+}
+
+.contact-profile-card {
+  justify-items: start;
+  padding: 28px;
+  border: 1px solid rgba(14, 23, 38, 0.08);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at top right, rgba(82, 199, 234, 0.18), transparent 26%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(239, 247, 255, 0.9));
 }
 
 .contact-avatar-shell {
-  width: 132px;
-  height: 132px;
-  margin: 0 auto 18px;
+  width: 156px;
+  height: 156px;
+  margin: 0;
   padding: 6px;
   border-radius: 999px;
   background: linear-gradient(135deg, rgba(118, 222, 243, 0.9), rgba(215, 247, 252, 0.95));
@@ -809,23 +997,27 @@ dd {
   height: 100%;
   border-radius: 999px;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 18%;
   border: 4px solid rgba(255, 255, 255, 0.94);
 }
 
 .contact-panel h2,
 .contact-panel p {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 18ch;
+  margin-left: 0;
+  margin-right: 0;
 }
 
-.contact-panel p:last-of-type {
-  max-width: 56ch;
+.contact-copy > p:first-of-type {
+  max-width: 24ch;
+}
+
+.contact-copy > p:last-of-type,
+.contact-profile-card p:last-of-type {
+  color: var(--muted);
 }
 
 .contact-signoff {
-  margin-top: 20px;
+  margin-top: 4px;
   color: var(--text);
   font-weight: 700;
 }
@@ -990,11 +1182,16 @@ dd {
   .case-hero,
   .project-grid,
   .about-grid,
+  .profile-showcase,
   .principles-grid,
+  .profile-snapshot-grid,
   .hero-facts-grid,
+  .impact-strip,
   .timeline-grid,
   .metrics-strip,
   .outcome-grid,
+  .highlight-grid,
+  .contact-panel,
   .case-section-split,
   .case-section-split.reverse {
     grid-template-columns: 1fr;
@@ -1029,6 +1226,15 @@ dd {
     padding: 22px;
   }
 
+  .profile-showcase {
+    padding: 24px 20px;
+  }
+
+  .profile-photo-frame,
+  .profile-photo {
+    min-height: 340px;
+  }
+
   .hero-stage-heading {
     max-width: 12ch;
   }
@@ -1038,6 +1244,7 @@ dd {
   .principles-grid,
   .timeline-grid,
   .outcome-grid,
+  .highlight-grid,
   .about-grid .panel,
   .contact-panel,
   .case-section,
@@ -1077,6 +1284,11 @@ dd {
   .current-case-study {
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  .contact-profile-card {
+    justify-items: center;
+    text-align: center;
   }
 }
 
