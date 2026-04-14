@@ -184,6 +184,11 @@ main {
   align-items: stretch;
 }
 
+.hero-grid-signature {
+  grid-template-columns: minmax(320px, 0.82fr) minmax(0, 1.18fr);
+  align-items: stretch;
+}
+
 .hero-portrait-shell {
   min-height: 100%;
   overflow: hidden;
@@ -197,6 +202,102 @@ main {
   min-height: 520px;
   object-fit: cover;
   object-position: center;
+}
+
+.hero-stage {
+  position: relative;
+  display: grid;
+  align-content: space-between;
+  gap: 22px;
+  min-height: 100%;
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  color: #eef7ff;
+  background:
+    radial-gradient(circle at top right, rgba(120, 224, 245, 0.36), transparent 24%),
+    radial-gradient(circle at 25% 78%, rgba(249, 181, 73, 0.24), transparent 20%),
+    linear-gradient(145deg, #0d1727 0%, #12263b 48%, #1a6d8d 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.hero-stage::after {
+  content: "";
+  position: absolute;
+  inset: auto -8% -18% auto;
+  width: 220px;
+  height: 220px;
+  border-radius: 44px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+  transform: rotate(38deg);
+}
+
+.hero-stage > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-stage-kicker {
+  margin: 0;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(238, 247, 255, 0.72);
+}
+
+.hero-stage-badge {
+  display: inline-grid;
+  place-items: center;
+  width: 82px;
+  height: 82px;
+  border-radius: 24px;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0e1726;
+  background: linear-gradient(135deg, #7fe3f4, #d5fbff);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.22);
+}
+
+.hero-stage-heading {
+  max-width: 10ch;
+  color: #f6fbff;
+  font-size: clamp(2.2rem, 4.4vw, 4.4rem);
+  line-height: 0.98;
+}
+
+.hero-stage-copy {
+  max-width: 30ch;
+  margin: 0;
+  color: rgba(238, 247, 255, 0.78);
+}
+
+.hero-stage-signals {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero-stage-signals li {
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+.hero-stage-foot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hero-stage-foot span {
+  padding: 10px 14px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(238, 247, 255, 0.88);
 }
 
 .eyebrow {
@@ -904,8 +1005,13 @@ dd {
     padding: 24px 20px;
   }
 
-  .hero-portrait {
-    min-height: 380px;
+  .hero-stage {
+    min-height: auto;
+    padding: 22px;
+  }
+
+  .hero-stage-heading {
+    max-width: 12ch;
   }
 
   .section-intro,
