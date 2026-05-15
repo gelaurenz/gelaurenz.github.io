@@ -2,69 +2,71 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 const study = {
-  title: "School of UX Booking Experience",
+  title: "Booking Experience Redesign",
   eyebrow: "Featured case study",
   subtitle:
-    "Turning a fixed-slide portfolio into a clear product story about research, flow clarity, and confidence at decision-heavy moments.",
+    "A travel booking experience shaped through design review, research, journey analysis, accessibility checks, usability validation, prototyping, and developer-ready handover.",
   summary:
-    "This draft case study is shaped from the Figma presentation structure you already have: project brief, design review, research, journey mapping, accessibility, testing, and handover. It gives you a responsive storytelling frame that you can keep enriching with your own screenshots and outcomes.",
-  client: "School of UX",
-  role: "UX Designer",
-  duration: "6 week project",
-  team: "Solo design with tutor and stakeholder feedback",
+    "This case study translates the strongest parts of the earlier slide portfolio into a more modern web story. It focuses on how the product was reviewed, researched, tested, improved, and prepared for implementation across web and mobile surfaces.",
+  client: "Travel platform",
+  role: "UX & Product Designer",
+  duration: "Multi-phase product work",
+  team: "Cross-functional collaboration with business and development",
   coverImage: "/images/work/case-marketplace.png",
-  coverAlt: "Sample interface showing a browsing and comparison experience",
+  coverAlt: "Travel booking flows shown across web and mobile interfaces",
   metrics: [
-    { label: "Deck phases", value: "8" },
-    { label: "Core themes", value: "Research to handover" },
-    { label: "Focus", value: "Reduce friction in key decisions" }
+    { label: "Scale", value: "2M+ downloads" },
+    { label: "Surfaces", value: "Web, Android, iOS" },
+    { label: "Scope", value: "Review to handover" }
   ],
   outcomes: [
-    "Built a portfolio case-study format that mirrors your process instead of just showing final screens.",
-    "Created room for annotated screenshots, research evidence, and testing outcomes on any screen size.",
-    "Turned a slide-based narrative into reusable web sections you can extend with real project detail."
+    "Reviewed the existing experience to identify what worked, what created friction, and where assumptions needed to be challenged.",
+    "Used research, journey analysis, accessibility checks, and usability validation to improve clarity in decision-heavy moments.",
+    "Prepared implementation-ready design assets and state thinking so the work could move more confidently into development."
   ],
   sections: [
     {
-      eyebrow: "Project brief",
-      title: "Frame the challenge before showing the screens.",
-      body: "The Figma deck already has a strong project rhythm, so the web version starts with the problem, audience, and delivery context. Instead of asking people to decode isolated slides, the case study now explains what the product needed to solve and why that challenge mattered.",
-      note: "Swap this block with the final project brief once you are ready to publish the real business context.",
+      eyebrow: "Design review",
+      title: "Review the current experience before redesigning it.",
+      body: "The work began with a design review of the existing website and booking experience. The goal was to evaluate what already worked, where the interface created uncertainty, and which parts of the journey still relied on assumptions instead of evidence.",
+      note: "The original portfolio showed a large review board. On the site, that same idea becomes easier to understand as a clear product diagnosis.",
       image: "/images/work/case-landing.png",
       imageAlt: "Sample landing page and service entry view"
     },
     {
-      eyebrow: "Design review",
-      title: "Use visual critique to reveal what changed.",
-      body: "The review section is designed for before-and-after thinking: what was noisy, what interrupted flow, and where trust or clarity broke down. This makes it easier to show product judgment, not just polished interface output.",
-      note: "Great place for annotated screenshots from your Figma boards.",
+      eyebrow: "User research",
+      title: "Understand the audience behind the current numbers.",
+      body: "Research focused on understanding the target demographic, the average user profile, and the business hypotheses behind the product. Surveys, personas, and preference tests helped reveal how users behaved and which interface directions felt more intuitive.",
+      note: "The earlier portfolio included persona work and button preference testing. That evidence now supports a more readable research narrative.",
       image: "/images/work/case-filter.png",
       imageAlt: "Sample filter and consent flow"
     },
     {
-      eyebrow: "User research",
-      title: "Bring evidence into the story early.",
-      body: "Your existing deck already signals research depth through survey findings, persona thinking, and average user profiling. On the site, those signals become readable content blocks that can scale from one insight to a fuller synthesis without breaking the layout."
-    },
-    {
       eyebrow: "Journey mapping",
-      title: "Make the user path scannable.",
-      body: "Journey work becomes more persuasive on the web when each step is paired with pain points and design response. This layout gives you a way to show the current path, the friction moments, and the design opportunities side by side."
+      title: "Map how many steps it takes to complete the booking journey.",
+      body: "A key part of the process was understanding how users moved through the course booking flow, where they hesitated, and which unhappy paths or error states created unnecessary tension. Journey analysis helped highlight where the experience could be simplified or better supported."
     },
     {
       eyebrow: "Accessibility",
-      title: "Treat inclusive design as product quality.",
-      body: "Accessibility is positioned as a core part of the work, not an afterthought. The section supports checklists, audit findings, and proof that your decisions improve clarity for a wider range of users."
+      title: "Treat accessibility and performance as experience quality.",
+      body: "Accessibility validation looked at whether content stayed intact, whether contrast and hierarchy stayed readable, whether the interface remained usable with a keyboard, and whether the system still worked across different screen sizes. Performance observations were also used to flag pages that could affect conversion or trust."
     },
     {
       eyebrow: "Usability testing",
-      title: "Capture what changed after real feedback.",
-      body: "Testing sections are set up for scenario walkthroughs, observation highlights, and iteration notes. This lets you explain what users struggled with, what you adjusted, and what you would validate next."
+      title: "Validate assumptions through multiple lenses.",
+      body: "Validation included remote and in-house usability testing, heuristic evaluation, and attitudinal metrics such as SUS, SUPR-Q, CSAT, SEQ, UMUX, and customer feedback. Together, these methods helped turn opinions into concrete experience priorities.",
+      image: "/images/work/case-marketplace.png",
+      imageAlt: "Travel booking product shown across mobile and web interfaces"
+    },
+    {
+      eyebrow: "Prototyping",
+      title: "Use prototypes to refine the right product before release.",
+      body: "Prototypes of varying fidelity were used to capture ideas, test changes early, and validate whether proposed interactions actually reduced uncertainty. This helped align product thinking with user needs before development moved too far ahead."
     },
     {
       eyebrow: "Handover",
-      title: "Close with implementation readiness.",
-      body: "The final block is designed for design handover, stakeholder sign-off, and next-step recommendations. It gives the case study a product ending instead of stopping at static visuals."
+      title: "Finish with implementation-ready assets and state thinking.",
+      body: "The handover phase prepared design assets for development and included user journeys, sitemap logic, content copy, design states, loading states, partial states, error states, and other rules needed to preserve quality during implementation."
     }
   ]
 };
@@ -103,7 +105,7 @@ const study = {
   <section class="section-space panel" data-reveal>
     <div class="section-intro">
       <p class="eyebrow">Outcomes</p>
-      <h2>Why this project belongs in the portfolio.</h2>
+      <h2>Why this project matters in the portfolio.</h2>
     </div>
 
     <div class="outcome-grid">
@@ -145,11 +147,12 @@ const study = {
   </section>
 
   <section class="panel prose-panel section-space" data-reveal>
-    <p class="eyebrow">Working draft note</p>
+    <p class="eyebrow">Case study note</p>
     <p>
-      This page is intentionally written as a high-quality draft so you can replace content section by
-      section instead of rewriting the entire site later. As you add screenshots and stronger outcomes,
-      the structure will hold up without needing a layout overhaul.
+      This case study now carries the same core material as the previous slide portfolio, but in a
+      more modern format that is easier to read, easier to update, and stronger as a hiring
+      artifact. The next improvement step is swapping more of the remaining placeholder visuals
+      with your real annotated screenshots.
     </p>
   </section>
 </BaseLayout>
