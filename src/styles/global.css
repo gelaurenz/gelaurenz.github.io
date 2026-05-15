@@ -34,8 +34,9 @@ body {
   color: var(--text);
   font-family: "Manrope", sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(82, 199, 234, 0.22), transparent 28%),
-    radial-gradient(circle at 85% 18%, rgba(124, 214, 239, 0.25), transparent 22%),
+    radial-gradient(circle at top left, rgba(82, 199, 234, 0.18), transparent 26%),
+    radial-gradient(circle at 85% 18%, rgba(124, 214, 239, 0.18), transparent 18%),
+    radial-gradient(circle at 50% 100%, rgba(19, 46, 74, 0.04), transparent 32%),
     linear-gradient(180deg, #f8fbff 0%, #eef4fb 48%, #edf2f8 100%);
 }
 
@@ -79,6 +80,7 @@ main {
   border-radius: var(--radius-xl);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(249, 252, 255, 0.86));
   box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(14px);
 }
 
 .panel::after {
@@ -189,6 +191,11 @@ main {
   align-items: stretch;
 }
 
+.hero-copy {
+  display: grid;
+  align-content: center;
+}
+
 .hero-portrait-shell {
   min-height: 100%;
   overflow: hidden;
@@ -263,6 +270,7 @@ main {
   color: #f6fbff;
   font-size: clamp(2.2rem, 4.4vw, 4.4rem);
   line-height: 0.98;
+  text-wrap: balance;
 }
 
 .hero-stage-copy {
@@ -432,7 +440,7 @@ dd {
 
 .hero-facts-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
   margin-top: 24px;
 }
@@ -705,6 +713,7 @@ dd {
 .project-card {
   overflow: hidden;
   display: grid;
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
 }
 
 .project-card-preview {
@@ -714,6 +723,18 @@ dd {
 .project-image-shell {
   min-height: 260px;
   background: linear-gradient(135deg, rgba(82, 199, 234, 0.18), rgba(14, 23, 38, 0.02));
+}
+
+.project-card:hover,
+.highlight-card:hover,
+.contact-profile-card:hover,
+.profile-note-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 26px 54px rgba(17, 28, 45, 0.12);
+}
+
+.project-card:hover {
+  border-color: rgba(82, 199, 234, 0.24);
 }
 
 .project-poster {
@@ -811,6 +832,12 @@ dd {
   padding: 22px;
 }
 
+.project-card-preview:nth-child(2) {
+  background:
+    radial-gradient(circle at top right, rgba(82, 199, 234, 0.12), transparent 24%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(244, 249, 255, 0.9));
+}
+
 .tag-list {
   display: flex;
   flex-wrap: wrap;
@@ -864,6 +891,15 @@ dd {
 
 .principle-card {
   padding: 24px;
+}
+
+.process-grid .story-card:nth-child(1),
+.process-grid .story-card:nth-child(4),
+.delivery-grid .story-card:nth-child(2),
+.delivery-grid .story-card:nth-child(4) {
+  background:
+    radial-gradient(circle at top right, rgba(82, 199, 234, 0.14), transparent 22%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(241, 247, 255, 0.9));
 }
 
 .methods-grid {
@@ -932,6 +968,7 @@ dd {
 .highlight-card {
   position: relative;
   overflow: hidden;
+  transition: transform 220ms ease, box-shadow 220ms ease;
 }
 
 .highlight-card::after {
@@ -980,6 +1017,7 @@ dd {
   background:
     radial-gradient(circle at top right, rgba(82, 199, 234, 0.18), transparent 26%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(239, 247, 255, 0.9));
+  transition: transform 220ms ease, box-shadow 220ms ease;
 }
 
 .contact-avatar-shell {
@@ -1158,6 +1196,12 @@ dd {
 
 .prose-panel p {
   color: var(--muted);
+}
+
+.case-study-preview {
+  background:
+    radial-gradient(circle at top right, rgba(82, 199, 234, 0.16), transparent 24%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(241, 248, 255, 0.9));
 }
 
 .site-footer {
