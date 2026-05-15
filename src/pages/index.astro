@@ -6,11 +6,11 @@ const site = {
   role: "UX & Product Designer",
   location: "Austria",
   summary:
-    "UX- & product designer, researcher, and prototype engineer designing intuitive interfaces for products that reach millions of customers.",
+    "UX designer, researcher, and prototype engineer shaping intuitive digital products for large-scale platforms and emerging experiences.",
   intro:
-    "I hold a Master of Science in Human-Centered Computing from the University of Applied Sciences Hagenberg. I design engaging digital products with a focus on usability, clarity, and the kind of interaction quality that helps teams ship with confidence.",
+    "I hold a Master of Science in Human-Centered Computing from the University of Applied Sciences Hagenberg. I have been designing engaging and intuitive interfaces for products that delight millions of customers, always looking for better clarity, stronger usability, and more thoughtful interaction design.",
   mission:
-    "My aim is to create products that not only function well but also bring joy and inspiration. I am especially motivated by the intersection of technology, design, and human insight.",
+    "My aim is to create products that not only function well but also bring joy and inspiration. I am especially motivated by the intersection of technology, design, travel, and human insight.",
   availability:
     "Open to UX design, product design, research, and prototyping collaborations.",
   contactLinks: [
@@ -37,29 +37,30 @@ const site = {
     "Prototype Engineer"
   ],
   aboutParagraphs: [
-    "I have been designing engaging and intuitive user interfaces for products that delight millions of customers. I bring usability, creativity, and teamwork into every project, always looking for ways to increase product maturity and make experiences easier to understand.",
-    "In this portfolio, you will find examples of previous work, design methods, and the process techniques I use to move from insight to interface. I care about turning complexity into momentum and making products feel thoughtful from the first interaction."
+    "I bring usability, creativity, and teamwork into every project, always looking for ways to increase product maturity and make experiences easier to understand. I enjoy turning complexity into structure and helping products feel calm, clear, and complete.",
+    "In this portfolio, you will find examples of product work, research methods, validation tools, and delivery practices that I use to strengthen UX maturity inside companies and ensure more exceptional user experiences."
   ]
 };
 
 const heroFacts = [
   { label: "Education", value: "MSc Human-Centered Computing" },
-  { label: "Focus", value: "Research, product design, prototyping" },
-  { label: "Base", value: "Austria" }
+  { label: "Focus", value: "Research, product design, prototype engineering" },
+  { label: "Base", value: "Austria" },
+  { label: "Scale", value: "Platforms with 2M+ downloads" }
 ];
 
 const heroSignals = [
-  "Products used by millions",
-  "Research-to-prototype workflow",
-  "Interfaces with clarity and momentum"
+  "Large-scale commerce and mobile UX",
+  "Research, validation, and prototyping",
+  "Accessibility, testing, and handover thinking"
 ];
 
 const projectPreviews = [
   {
     eyebrow: "E-Commerce",
-    title: "Travel portal and companion apps",
+    title: "Travel portal, mobile booking, and offer discovery",
     description:
-      "Responsible for designing a web portal and associated Android and iOS apps used by more than 2 million customers.",
+      "Responsible for designing a web portal and associated Android and iOS apps with more than 2 million downloads.",
     tags: ["Web portal", "Android + iOS", "2M+ downloads"],
     image: "/images/work/case-marketplace.png",
     imageAlt: "Travel booking product shown across mobile and web interfaces",
@@ -67,7 +68,7 @@ const projectPreviews = [
   },
   {
     eyebrow: "Lean Design",
-    title: "Online challenge platform",
+    title: "Challenge creation and participation platform",
     description:
       "Led the development of an online platform facilitating the creation, sharing, and participation in online challenges.",
     tags: ["Challenge flows", "Mobile-first", "Content systems"],
@@ -75,7 +76,7 @@ const projectPreviews = [
   },
   {
     eyebrow: "Gamification",
-    title: "Interactive tour application",
+    title: "Interactive tour application for Android",
     description:
       "Developed and designed a mobile application for interactive tours on Android platforms with a more playful exploration model.",
     tags: ["Android", "Gamified UX", "Interactive tours"],
@@ -83,27 +84,72 @@ const projectPreviews = [
   }
 ];
 
-const methods = [
+const processAreas = [
+  {
+    eyebrow: "UI",
+    title: "Design review",
+    body:
+      "I review current products to evaluate what works, what does not, and where assumptions deserve to be challenged from a product and usability perspective."
+  },
+  {
+    eyebrow: "Research",
+    title: "User research",
+    body:
+      "I use personas, surveys, and audience profiling to understand who the product is for, how current behavior looks, and which business hypotheses should be validated next."
+  },
   {
     eyebrow: "User experience",
-    title: "Usability testing",
+    title: "User journey",
     body:
-      "I validate design assumptions from review cycles and stakeholder discussions through structured testing and attitudinal metrics. Depending on the project, I use SUS, SUPR-Q, UEQ, CSAT, SMEQ, and direct customer feedback to understand where the experience succeeds and where it still creates friction."
+      "I map journeys to understand how many steps users need to complete important tasks, where they hesitate, and where the experience can be simplified or optimized."
+  },
+  {
+    eyebrow: "User experience",
+    title: "Accessibility",
+    body:
+      "I treat accessibility and performance as part of product quality by checking content integrity, keyboard support, screen-size resilience, and key WCAG expectations."
+  }
+];
+
+const validationMethods = [
+  {
+    eyebrow: "User experience",
+    title: "Qualitative usability testing",
+    body:
+      "I run remote and in-house usability studies to validate design assumptions, capture real behavior, and translate observations into concrete product improvements."
+  },
+  {
+    eyebrow: "User experience",
+    title: "Heuristic evaluation",
+    body:
+      "I use heuristic reviews to surface experience issues early, give teams a shared quality lens, and prioritize where the interface needs the most improvement."
+  },
+  {
+    eyebrow: "User experience",
+    title: "Attitudinal metrics",
+    body:
+      "Depending on project goals, I use SUS, SUPR-Q, CSAT, SEQ, UMUX, SMEQ, Net Promoter Score, and customer feedback to quantify user perception."
   },
   {
     eyebrow: "User experience",
     title: "Prototyping",
     body:
-      "I create prototypes of varying fidelity to capture design concepts and test them with users early. Through prototyping, I refine requirements, reduce risk, and help teams release the right product with more clarity. My workflow regularly includes Figma and ProtoPie."
+      "I create prototypes of varying fidelity to capture concepts, test them early, and refine requirements before release. My workflow regularly includes Figma and ProtoPie."
+  },
+  {
+    eyebrow: "UI",
+    title: "Design handover",
+    body:
+      "I prepare handovers with user journeys, sitemap logic, content copy, component states, loading and error states, and implementation-ready detail for developers."
   }
 ];
 
 const currentCaseStudy = {
-  title: "School of UX Booking Experience",
-  eyebrow: "Current detailed case study",
+  title: "Booking Experience Case Study",
+  eyebrow: "Featured case study",
   summary:
-    "A responsive case-study build focused on research, journey clarity, accessibility, usability testing, and handover.",
-  tags: ["Research-led", "Journey mapping", "Accessibility", "Testing"],
+    "A product story built from the original portfolio deck, now reframed for the web around research, journey clarity, accessibility, validation, and handover.",
+  tags: ["Research", "Journey mapping", "Accessibility", "Testing", "Handover"],
   href: "/work/school-of-ux-booking/"
 };
 
@@ -111,40 +157,40 @@ const contactImage =
   "data:image/jpeg;base64,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";
 
 const profileSpotlight = {
-  title: "A portfolio that feels more like a product presence than a slide deck.",
+  title: "A calmer, more editorial portfolio built from real process work.",
   body:
-    "This section makes your profile visible immediately with a portrait, a stronger positioning layer, and a set of visual placeholders you can later replace with real outcomes, awards, or project stats.",
+    "Instead of repeating the old slide layout, this version pulls the strongest content into a cleaner web experience with better pacing, more hierarchy, and clearer proof of how you work.",
   snapshot: [
-    { label: "Current focus", value: "UX strategy, product design, prototyping" },
-    { label: "Best fit", value: "Product teams that need structure and sharper UX quality" },
-    { label: "Visualized impact", value: "2M+ users, faster validation, cleaner flows" }
+    { label: "Current focus", value: "UX strategy, product design, research, prototyping" },
+    { label: "Best fit", value: "Teams that want strong UX structure and sharper product quality" },
+    { label: "Strength", value: "End-to-end flow from review and research to delivery" }
   ]
 };
 
 const impactPreview = [
-  { value: "2M+", label: "Customers reached across commerce products" },
-  { value: "12+", label: "Flows visualized here as portfolio-ready storytelling" },
-  { value: "48h", label: "Sample sprint framing for turning research into prototype direction" }
+  { value: "2M+", label: "Downloads referenced in the commerce work" },
+  { value: "8", label: "Core phases now integrated from the earlier portfolio deck" },
+  { value: "5", label: "Validation and delivery methods visible on the homepage" }
 ];
 
 const visualHighlights = [
   {
-    eyebrow: "Sample highlight",
-    title: "Design systems with momentum",
+    eyebrow: "Research",
+    title: "From personas to preference testing",
     body:
-      "Reusable patterns, cleaner handoff, and more consistent interface behavior across product surfaces."
+      "The older portfolio already contained customer profiling, survey insights, and test variations. They now live inside a more structured, easier-to-skim narrative."
   },
   {
-    eyebrow: "Sample highlight",
-    title: "Research that drives action",
+    eyebrow: "Experience",
+    title: "From journey mapping to accessibility",
     body:
-      "Usability review, attitudinal metrics, and prototype feedback shaped into clear next decisions."
+      "Key experience layers such as journey clarity, unhappy paths, WCAG validation, and performance are now grouped as part of a modern product-quality story."
   },
   {
-    eyebrow: "Sample highlight",
-    title: "Stories recruiters can skim",
+    eyebrow: "Delivery",
+    title: "From testing to implementation readiness",
     body:
-      "Sharper sections, better visual pacing, and more visible proof points make the portfolio easier to evaluate fast."
+      "Usability testing, heuristic evaluation, attitudinal metrics, prototyping, and handover are all shown as part of how you move ideas into shipped products."
   }
 ];
 
@@ -212,14 +258,14 @@ const visualHighlights = [
     </div>
   </section>
 
-  <section class="profile-showcase panel section-space" data-reveal>
+  <section id="about" class="profile-showcase panel section-space" data-reveal>
     <div class="profile-showcase-media">
       <div class="profile-photo-frame">
         <img src={contactImage} alt="Portrait of Laurenz Gebauer" class="profile-photo" loading="eager" />
       </div>
 
       <article class="profile-note-card">
-        <p class="eyebrow">Visible profile</p>
+        <p class="eyebrow">About</p>
         <h3>{profileSpotlight.title}</h3>
         <p>{profileSpotlight.body}</p>
       </article>
@@ -227,11 +273,10 @@ const visualHighlights = [
 
     <div class="profile-showcase-copy">
       <p class="eyebrow">Designer snapshot</p>
-      <h2>Now your picture is clearly part of the page, not hidden at the bottom.</h2>
-      <p class="supporting-copy">
-        This profile block is intentionally more editorial and modern. It gives the homepage a
-        clearer personal anchor while still leaving room for product work and case-study depth.
-      </p>
+      <h2>Designing digital products that combine usability, clarity, and joy.</h2>
+      {site.aboutParagraphs.map((paragraph) => (
+        <p class="supporting-copy">{paragraph}</p>
+      ))}
 
       <div class="profile-snapshot-grid">
         {profileSpotlight.snapshot.map((item) => (
@@ -256,10 +301,11 @@ const visualHighlights = [
   <section id="work" class="panel section-space" data-reveal>
     <div class="section-intro">
       <p class="eyebrow">Projects</p>
-      <h2>Product work across commerce, challenge systems, and gamified mobile experiences.</h2>
+      <h2>Selected work across commerce, challenge systems, and gamified mobile experiences.</h2>
       <p>
-        These previews are drawn from your portfolio material and show the breadth of your work:
-        large-scale commerce flows, lean platform design, and interaction-heavy mobile concepts.
+        The previews below are adapted from the previous portfolio and translated into a cleaner
+        web format. They show the breadth of the work while keeping the presentation minimal and
+        easier to scan.
       </p>
     </div>
 
@@ -289,69 +335,38 @@ const visualHighlights = [
               {project.tags.map((tag) => <li>{tag}</li>)}
             </ul>
 
-            <span class="text-link muted-label">Detailed case study coming next</span>
+            <span class="text-link muted-label">Preview from the previous portfolio</span>
           </div>
         </article>
       ))}
     </div>
   </section>
 
-  <section id="about" class="about-grid section-space" data-reveal>
-    <article class="panel">
-      <p class="eyebrow">About</p>
-      <h2>Creating products that combine usability, clarity, and joy.</h2>
-      {site.aboutParagraphs.map((paragraph) => (
-        <p>{paragraph}</p>
-      ))}
-    </article>
-
-    <aside class="panel panel-contrast">
-      <p class="eyebrow">Quick profile</p>
-      <ul class="facts">
-        <li><strong>Role:</strong> {site.role}</li>
-        <li><strong>Base:</strong> {site.location}</li>
-        <li><strong>Education:</strong> MSc in Human-Centered Computing</li>
-        <li><strong>Strengths:</strong> Research, interaction design, prototyping</li>
-        <li><strong>Mindset:</strong> Clear systems, engaging flows, better decisions</li>
-      </ul>
-    </aside>
-  </section>
-
   <section id="approach" class="panel section-space" data-reveal>
     <div class="section-intro">
-      <p class="eyebrow">Methods</p>
-      <h2>Research, testing, and prototyping are part of the product work, not a separate layer.</h2>
+      <p class="eyebrow">Approach</p>
+      <h2>From design review to accessibility, the product process is visible instead of hidden.</h2>
     </div>
 
-    <div class="principles-grid methods-grid">
-      {methods.map((method, index) => (
-        <article class="principle-card method-card">
+    <div class="principles-grid process-grid">
+      {processAreas.map((method, index) => (
+        <article class="principle-card method-card story-card">
           <span>{String(index + 1).padStart(2, "0")}</span>
           <p class="eyebrow eyebrow-inline">{method.eyebrow}</p>
           <h3>{method.title}</h3>
           <p>{method.body}</p>
         </article>
       ))}
-
-      <article class="principle-card method-card method-card-accent">
-        <span>03</span>
-        <p class="eyebrow eyebrow-inline">Portfolio build</p>
-        <h3>Case studies that read like product stories.</h3>
-        <p>
-          The site is structured to show context, design reasoning, testing, accessibility, and
-          implementation readiness instead of relying on static mockups alone.
-        </p>
-      </article>
     </div>
   </section>
 
   <section class="panel section-space highlight-band" data-reveal>
     <div class="section-intro">
-      <p class="eyebrow">Visual placeholders</p>
-      <h2>A more premium-looking structure while you are still collecting final project content.</h2>
+      <p class="eyebrow">Integrated content</p>
+      <h2>The strongest ideas from the old portfolio are now grouped into a cleaner web narrative.</h2>
       <p>
-        These cards use sample framing so the site already feels rich and intentional. Later, you
-        can replace each one with real numbers, awards, team size, or project outcomes.
+        Instead of forcing visitors through deck slides, the site now highlights the most relevant
+        parts of the work in a calmer, more modern structure.
       </p>
     </div>
 
@@ -361,6 +376,28 @@ const visualHighlights = [
           <p class="eyebrow eyebrow-inline">{item.eyebrow}</p>
           <h3>{item.title}</h3>
           <p>{item.body}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="panel section-space" data-reveal>
+    <div class="section-intro">
+      <p class="eyebrow">Validation and delivery</p>
+      <h2>Testing, prototyping, and handover are shown as part of the product craft.</h2>
+      <p>
+        The previous portfolio already had strong evidence of how you validate and deliver work.
+        This section makes that explicit so the site feels more credible and complete.
+      </p>
+    </div>
+
+    <div class="principles-grid delivery-grid">
+      {validationMethods.map((method, index) => (
+        <article class={`principle-card method-card ${index === validationMethods.length - 1 ? "method-card-accent" : "story-card"}`}>
+          <span>{String(index + 1).padStart(2, "0")}</span>
+          <p class="eyebrow eyebrow-inline">{method.eyebrow}</p>
+          <h3>{method.title}</h3>
+          <p>{method.body}</p>
         </article>
       ))}
     </div>
@@ -379,7 +416,7 @@ const visualHighlights = [
       </ul>
 
       <a href={currentCaseStudy.href} class="button button-primary">
-        Read the current case study
+        Read the detailed case study
       </a>
     </div>
   </section>
