@@ -2,31 +2,32 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const profileImage = "/images/profile-laurenz.jpg";
+const cvHref = "/Laurenz_Gebauer_CV.pdf";
 
 const site = {
   name: "Laurenz Gebauer",
   role: "Senior Product Designer",
-  location: "Austria",
-  summary:
-    "I combine years of IT, mobile development, and UX research with AI-assisted workflows to turn complex product problems into faster, clearer outcomes.",
-  intro:
-    "Senior Product Designer at Invia Group, working across web, Android, and iOS products used by millions of customers.",
-  mission:
-    "My goal is to build digital products that are easy to understand, technically realistic, and strong enough to move from research into production without losing quality.",
+  location: "Austria and Germany, as well as remote",
+  heroHeadline:
+    "Product designer turning complex technical systems into clear, usable digital experiences.",
+  heroText:
+    "I combine a background in IT support, mobile computing, and HCI with UX research, prototyping, and service design to create practical digital products.",
+  aboutHeadline:
+    "I design digital products where technical complexity meets human needs.",
+  aboutText:
+    "My background in IT support, mobile computing, and HCI helps me understand both user pain points and technical constraints. I use research, prototyping, and structured design methods to turn unclear problems into usable product experiences.",
+  availability: "Available for UX/Product Design roles in Austria and Germany, as well as remote.",
   contactLinks: [
     { label: "Email", href: "mailto:laurenz.gebauer@gmx.at" },
     { label: "Call", href: "tel:+436606422328" },
-    { label: "GitHub", href: "https://github.com/gelaurenz" },
-    {
-      label: "Figma portfolio",
-      href: "https://www.figma.com/design/M1Gy1R4VKp6XwEXmrMCcYI/Gebauer-L.--Portfolio?node-id=328-22996&t=Nkl4n2Rei7qcDgh8-1"
-    }
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/laurenz-gebauer/" },
+    { label: "Download CV", href: cvHref, download: true }
   ]
 };
 
 const heroStats = [
-  { value: "2M+", label: "downloads across commerce apps" },
-  { value: "10+", label: "years across IT, mobile, and product" },
+  { value: "2M+", label: "downloads across product surfaces" },
+  { value: "10+", label: "years across IT, mobile, and UX" },
   { value: "MSc", label: "Human-Centered Computing" }
 ];
 
@@ -34,22 +35,22 @@ const timelineItems = [
   {
     period: "2012 - 2014",
     title: "IT services foundation",
-    body: "Application support, server operations, and network support at Atos IT Solutions and Raiffeisen Informatik."
+    body: "Application support, server operations, and network support."
   },
   {
     period: "2016 - 2021",
     title: "Mobile computing and HCI",
-    body: "BSc Mobile Computing and MSc Human-Centered Computing at FH Hagenberg, including research on IoT tracking and interactive mobile tours."
+    body: "BSc Mobile Computing and MSc Human-Centered Computing at FH Hagenberg."
   },
   {
     period: "2020 - 2021",
     title: "Android product building",
-    body: "Designed and developed Raccoon Adventures, an Android app for interactive tours and gamified discovery."
+    body: "Designed and developed an Android app for interactive tours."
   },
   {
     period: "2022 - now",
     title: "Senior product design",
-    body: "UX/UI design for web, Android, and iOS travel products at Invia Group, including research, prototyping, testing, and handover."
+    body: "UX/UI for web, Android, and iOS travel products at Invia Group."
   }
 ];
 
@@ -70,38 +71,46 @@ const toolGroups = [
 
 const projectPreviews = [
   {
-    eyebrow: "E-Commerce",
     title: "Travel booking platform",
-    description:
-      "Designed web, Android, and iOS booking experiences for a travel product with more than 2 million downloads.",
-    tags: ["Web", "Android", "iOS"],
+    problem:
+      "Customers needed clearer search, filtering, and checkout flows across web and native apps.",
+    role: "UX/UI design for web, Android, and iOS booking experiences.",
+    methods: "Design review, interaction design, prototyping, handoff",
+    outcome: "Reduced checkout steps from 6 to 4 in the redesigned flow.",
+    tags: ["Interaction Design", "Mobile UX", "Prototyping", "Handoff"],
     image: "/images/work/project-ecommerce-web.jpg",
     imageAlt: "Travel booking platform screens across web and mobile"
   },
   {
-    eyebrow: "Lean Design",
     title: "Online challenge platform",
-    description:
-      "Led the design of a mobile-first product for creating, sharing, and participating in online challenges.",
-    tags: ["Challenge flows", "Mobile app", "Content system"],
+    problem:
+      "Teams needed a simpler way to create, share, and participate in online challenges.",
+    role: "Led UX structure, mobile-first flows, and implementation alignment.",
+    methods: "User flows, wireframing, content system, mobile UX",
+    outcome: "Created 3 user flows and 2 interactive prototypes for validation.",
+    tags: ["Service Design", "Mobile UX", "Interaction Design"],
     image: "/images/work/project-lean.jpg",
     imageAlt: "Mobile challenge app screens"
   },
   {
-    eyebrow: "Gamification",
     title: "Interactive tour application",
-    description:
-      "Designed and prototyped an Android tour app with playful discovery, map-based content, and gamified progression.",
-    tags: ["Android", "Gamified UX", "Tours"],
+    problem:
+      "Tour content needed to feel engaging, location-aware, and easy to follow on Android.",
+    role: "Freelance designer and Android developer for the mobile experience.",
+    methods: "Android design, prototyping, gamified flows, usability review",
+    outcome: "Identified 7 usability issues before the next prototype iteration.",
+    tags: ["Mobile UX", "Prototyping", "Usability Testing"],
     image: "/images/work/project-gamification.jpg",
     imageAlt: "Gamified mobile tour interaction screens"
   },
   {
-    eyebrow: "Concept case study",
     title: "Food delivery comparison",
-    description:
-      "A polished product concept for comparing Wolt, Lieferando, and local providers by delivery time, total cost, availability, and trust signals.",
-    tags: ["AI workflow", "Mobile UX", "Decision support"],
+    problem:
+      "Users compare delivery providers manually and often discover fees too late.",
+    role: "Concept case study covering UX research, service design, and prototype logic.",
+    methods: "Journey mapping, AI-assisted synthesis, mobile prototyping",
+    outcome: "Tested with 5 users to improve comparison clarity across restaurant options.",
+    tags: ["UX Research", "Service Design", "Mobile UX", "Usability Testing"],
     visual: "delivery"
   }
 ];
@@ -109,65 +118,64 @@ const projectPreviews = [
 const processAreas = [
   {
     title: "Product diagnosis",
-    body:
-      "I evaluate flows, business assumptions, technical constraints, analytics signals, and user friction before jumping into redesign."
+    body: "Review flows, assumptions, constraints, and business goals before solution work."
   },
   {
     title: "User research",
-    body:
-      "I use personas, surveys, preference tests, and customer signals to understand the audience behind the product."
+    body: "Use interviews, surveys, analytics signals, and testing to understand real needs."
   },
   {
     title: "AI-assisted synthesis",
-    body:
-      "I use AI to structure research notes, compare patterns, accelerate documentation, and create clearer decision material for teams."
+    body: "Structure notes, patterns, and edge cases faster without replacing judgment."
   },
   {
     title: "Journey mapping",
-    body:
-      "I map happy paths, unhappy paths, error states, and decision moments so teams can improve the full experience."
+    body: "Map decision points, pain points, error states, and opportunities."
   },
   {
     title: "Usability testing",
-    body:
-      "I validate concepts with qualitative testing, heuristic reviews, SUS, CSAT, SEQ, UMUX, and user feedback."
+    body: "Validate prototypes with tasks, feedback, and measurable usability signals."
   },
   {
-    title: "Handover",
-    body:
-      "I prepare states, flows, content, and implementation detail so design decisions survive the move into development."
+    title: "Handoff",
+    body: "Prepare flows, states, specs, and implementation details for development."
   }
 ];
 
-const currentCaseStudy = {
+const featuredCaseStudy = {
   title: "Food Delivery Comparison Experience",
-  summary:
-    "A concept case study showing how AI-supported UX can help customers compare food delivery providers faster, with fewer checkout surprises.",
-  tags: ["Concept", "Mobile UX", "AI workflow", "Service design"],
-  href: "/work/school-of-ux-booking/"
+  context: "A concept product for comparing providers such as Wolt, Lieferando, and local services.",
+  problem:
+    "Customers often switch between apps and only understand total cost, delivery time, or availability late in the journey.",
+  role: "Product strategy, UX research, service design, mobile UX, and prototyping.",
+  process: "Mapped the decision journey, defined comparison signals, and built a mobile-first prototype structure.",
+  outcome:
+    "Prototype tested with 5 users and improved comparison clarity across restaurant options.",
+  href: "/work/school-of-ux-booking/",
+  tags: ["UX Research", "Service Design", "Mobile UX", "Prototyping"]
 };
 ---
 
 <BaseLayout
   title="Laurenz Gebauer | UX Portfolio"
-  description="UX portfolio for Laurenz Gebauer featuring product design, user research, prototyping, and case-study storytelling."
+  description="UX and Product Design portfolio for Laurenz Gebauer, focused on research, usability, mobile UX, and technically grounded product design."
   path="/"
 >
   <section class="hero-section" data-reveal>
     <div class="hero-content">
-      <p class="eyebrow">UX, mobile, and AI-minded product design</p>
-      <h1>{site.name}</h1>
-      <p class="hero-lede">{site.summary}</p>
-      <p class="supporting-copy">{site.intro}</p>
+      <p class="eyebrow">UX & Product Designer</p>
+      <h1>{site.heroHeadline}</h1>
+      <p class="hero-lede">{site.heroText}</p>
 
       <div class="button-row">
         <a href="#work" class="button button-primary">View selected work</a>
         <a href="#contact" class="button button-secondary">Get in touch</a>
+        <a href={cvHref} class="button button-secondary" download>Download CV</a>
       </div>
     </div>
 
     <aside class="hero-card">
-      <p>Research, design, prototyping, and AI-enabled delivery for products that need clarity before they scale.</p>
+      <p>Research, usability, product thinking, and technical understanding for practical digital products.</p>
       <div class="hero-card-meta">
         <span>{site.location}</span>
         <span>{site.role}</span>
@@ -182,13 +190,8 @@ const currentCaseStudy = {
 
     <div class="about-copy">
       <p class="eyebrow">About</p>
-      <h2>Designing products with a technical backbone and a human-centered lens.</h2>
-      <p>{site.mission}</p>
-      <p>
-        My background spans IT infrastructure, mobile development, UX research, product design,
-        prototyping, and developer handover. That mix helps me connect strategy, design quality,
-        and implementation reality instead of treating them as separate worlds.
-      </p>
+      <h2>{site.aboutHeadline}</h2>
+      <p>{site.aboutText}</p>
 
       <div class="stats-grid">
         {heroStats.map((stat) => (
@@ -203,11 +206,11 @@ const currentCaseStudy = {
 
   <section class="experience-section section-space" data-reveal>
     <div class="section-intro">
-      <p class="eyebrow">Experience system</p>
-      <h2>From IT support to senior product design.</h2>
+      <p class="eyebrow">Experience & toolkit</p>
+      <h2>Technical background, product design practice, and modern UX tools.</h2>
       <p>
-        The story is not only visual design. It is a progression from technical systems and mobile
-        development into UX, research, and AI-supported product delivery.
+        A compact overview of the path that shaped how I approach product problems: systems first,
+        users always, and delivery in mind.
       </p>
     </div>
 
@@ -234,14 +237,14 @@ const currentCaseStudy = {
   <section id="work" class="work-section section-space" data-reveal>
     <div class="section-intro">
       <p class="eyebrow">Selected work</p>
-      <h2>Product work across commerce, challenge systems, and mobile experiences.</h2>
+      <h2>Evidence-based project previews for product and UX work.</h2>
       <p>
-        A compact overview of projects from the previous portfolio, now presented with a cleaner
-        structure and stronger visuals.
+        These cards are structured so real project details, metrics, and screenshots can be
+        replaced easily later.
       </p>
     </div>
 
-    <div class="project-grid project-grid-featured">
+    <div class="project-grid">
       {projectPreviews.map((project) => (
         <article class="project-card">
           {project.image ? (
@@ -264,9 +267,25 @@ const currentCaseStudy = {
           )}
 
           <div class="project-body">
-            <p class="eyebrow eyebrow-inline">{project.eyebrow}</p>
             <h3>{project.title}</h3>
-            <p>{project.description}</p>
+            <dl class="project-facts">
+              <div>
+                <dt>Problem</dt>
+                <dd>{project.problem}</dd>
+              </div>
+              <div>
+                <dt>Role</dt>
+                <dd>{project.role}</dd>
+              </div>
+              <div>
+                <dt>Methods</dt>
+                <dd>{project.methods}</dd>
+              </div>
+              <div>
+                <dt>Outcome</dt>
+                <dd>{project.outcome}</dd>
+              </div>
+            </dl>
 
             <ul class="tag-list" aria-label={`${project.title} tags`}>
               {project.tags.map((tag) => <li>{tag}</li>)}
@@ -277,14 +296,51 @@ const currentCaseStudy = {
     </div>
   </section>
 
+  <section class="case-study-preview section-space" data-reveal>
+    <div class="featured-case-copy">
+      <p class="eyebrow">Featured case study</p>
+      <h2>{featuredCaseStudy.title}</h2>
+      <p>{featuredCaseStudy.context}</p>
+
+      <div class="featured-case-grid">
+        <article>
+          <span>Problem</span>
+          <p>{featuredCaseStudy.problem}</p>
+        </article>
+        <article>
+          <span>Role</span>
+          <p>{featuredCaseStudy.role}</p>
+        </article>
+        <article>
+          <span>Process</span>
+          <p>{featuredCaseStudy.process}</p>
+        </article>
+        <article>
+          <span>Outcome</span>
+          <p>{featuredCaseStudy.outcome}</p>
+        </article>
+      </div>
+    </div>
+
+    <aside class="featured-case-aside">
+      <div class="mini-comparison" aria-hidden="true">
+        <span class="mini-dot"></span>
+        <strong>Best match</strong>
+        <p>Lower fee, faster ETA, available now</p>
+      </div>
+      <ul class="tag-list" aria-label="Featured case study tags">
+        {featuredCaseStudy.tags.map((tag) => <li>{tag}</li>)}
+      </ul>
+
+      <a href={featuredCaseStudy.href} class="button button-primary">Read case study</a>
+    </aside>
+  </section>
+
   <section id="approach" class="approach-section section-space" data-reveal>
     <div class="section-intro">
       <p class="eyebrow">Process</p>
-      <h2>A practical UX process from diagnosis to delivery.</h2>
-      <p>
-        The portfolio now focuses on the methods that matter most for hiring: how I understand
-        problems, validate decisions, and prepare work for implementation.
-      </p>
+      <h2>A clear UX process from diagnosis to handoff.</h2>
+      <p>Short, practical steps for turning unclear product problems into testable design decisions.</p>
     </div>
 
     <div class="method-grid">
@@ -298,41 +354,20 @@ const currentCaseStudy = {
     </div>
   </section>
 
-  <section class="case-study-preview section-space" data-reveal>
-    <div>
-      <p class="eyebrow">Featured case study</p>
-      <h2>{currentCaseStudy.title}</h2>
-      <p>{currentCaseStudy.summary}</p>
-    </div>
-
-    <div class="case-study-actions">
-      <div class="mini-comparison" aria-hidden="true">
-        <span class="mini-dot"></span>
-        <strong>Best match</strong>
-        <p>Lower fee, faster ETA, available now</p>
-      </div>
-      <ul class="tag-list" aria-label="Current case study tags">
-        {currentCaseStudy.tags.map((tag) => <li>{tag}</li>)}
-      </ul>
-
-      <a href={currentCaseStudy.href} class="button button-primary">
-        Read case study
-      </a>
-    </div>
-  </section>
-
   <section id="contact" class="contact-section section-space" data-reveal>
     <div class="contact-copy">
       <p class="eyebrow">Contact</p>
-      <h2>Hire me.</h2>
-      <p>
-        An experience designer using human insight, structure, and interaction design to help
-        product teams build better digital experiences.
-      </p>
+      <h2>Let us build something clear and usable.</h2>
+      <p>{site.availability}</p>
 
       <div class="contact-links">
         {site.contactLinks.map((link) => (
-          <a href={link.href} target={link.href.startsWith("http") ? "_blank" : undefined} rel="noreferrer">
+          <a
+            href={link.href}
+            target={link.href.startsWith("http") ? "_blank" : undefined}
+            rel={link.href.startsWith("http") ? "noreferrer" : undefined}
+            download={link.download}
+          >
             {link.label}
           </a>
         ))}
@@ -344,8 +379,8 @@ const currentCaseStudy = {
       <div>
         <h3>Laurenz Gebauer</h3>
         <p>
-          UX & Product Designer<br />
-          +43 660 642 232 8<br />
+          Senior Product Designer<br />
+          +43 660 642 2328<br />
           laurenz.gebauer@gmx.at
         </p>
       </div>
