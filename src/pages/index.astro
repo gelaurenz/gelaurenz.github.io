@@ -5,14 +5,14 @@ const profileImage = "/images/profile-laurenz.jpg";
 
 const site = {
   name: "Laurenz Gebauer",
-  role: "UX & Product Designer",
+  role: "Senior Product Designer",
   location: "Austria",
   summary:
-    "I design research-led digital products with a focus on usability, clarity, and confident delivery.",
+    "I combine years of IT, mobile development, and UX research with AI-assisted workflows to turn complex product problems into faster, clearer outcomes.",
   intro:
-    "I hold a Master of Science in Human-Centered Computing from the University of Applied Sciences Hagenberg and work across product design, research, prototyping, and handover.",
+    "Senior Product Designer at Invia Group, working across web, Android, and iOS products used by millions of customers.",
   mission:
-    "My goal is to create products that function beautifully, feel intuitive, and give teams the structure they need to make better decisions.",
+    "My goal is to build digital products that are easy to understand, technically realistic, and strong enough to move from research into production without losing quality.",
   contactLinks: [
     { label: "Email", href: "mailto:laurenz.gebauer@gmx.at" },
     { label: "Call", href: "tel:+436606422328" },
@@ -26,8 +26,46 @@ const site = {
 
 const heroStats = [
   { value: "2M+", label: "downloads across commerce apps" },
-  { value: "MSc", label: "Human-Centered Computing" },
-  { value: "UX", label: "research, product design, prototyping" }
+  { value: "10+", label: "years across IT, mobile, and product" },
+  { value: "MSc", label: "Human-Centered Computing" }
+];
+
+const timelineItems = [
+  {
+    period: "2012 - 2014",
+    title: "IT services foundation",
+    body: "Application support, server operations, and network support at Atos IT Solutions and Raiffeisen Informatik."
+  },
+  {
+    period: "2016 - 2021",
+    title: "Mobile computing and HCI",
+    body: "BSc Mobile Computing and MSc Human-Centered Computing at FH Hagenberg, including research on IoT tracking and interactive mobile tours."
+  },
+  {
+    period: "2020 - 2021",
+    title: "Android product building",
+    body: "Designed and developed Raccoon Adventures, an Android app for interactive tours and gamified discovery."
+  },
+  {
+    period: "2022 - now",
+    title: "Senior product design",
+    body: "UX/UI design for web, Android, and iOS travel products at Invia Group, including research, prototyping, testing, and handover."
+  }
+];
+
+const toolGroups = [
+  "Figma",
+  "ProtoPie",
+  "Android",
+  "Material Design",
+  "Human Interface Guidelines",
+  "Design Systems",
+  "MS Clarity",
+  "Firebase Analytics",
+  "Jira",
+  "Confluence",
+  "Miro",
+  "AI workflows"
 ];
 
 const projectPreviews = [
@@ -57,14 +95,22 @@ const projectPreviews = [
     tags: ["Android", "Gamified UX", "Tours"],
     image: "/images/work/project-gamification.jpg",
     imageAlt: "Gamified mobile tour interaction screens"
+  },
+  {
+    eyebrow: "Concept case study",
+    title: "Food delivery comparison",
+    description:
+      "A polished product concept for comparing Wolt, Lieferando, and local providers by delivery time, total cost, availability, and trust signals.",
+    tags: ["AI workflow", "Mobile UX", "Decision support"],
+    visual: "delivery"
   }
 ];
 
 const processAreas = [
   {
-    title: "Design review",
+    title: "Product diagnosis",
     body:
-      "I evaluate existing journeys, visual hierarchy, assumptions, and friction before jumping into solution work."
+      "I evaluate flows, business assumptions, technical constraints, analytics signals, and user friction before jumping into redesign."
   },
   {
     title: "User research",
@@ -72,14 +118,14 @@ const processAreas = [
       "I use personas, surveys, preference tests, and customer signals to understand the audience behind the product."
   },
   {
+    title: "AI-assisted synthesis",
+    body:
+      "I use AI to structure research notes, compare patterns, accelerate documentation, and create clearer decision material for teams."
+  },
+  {
     title: "Journey mapping",
     body:
       "I map happy paths, unhappy paths, error states, and decision moments so teams can improve the full experience."
-  },
-  {
-    title: "Accessibility",
-    body:
-      "I check contrast, content integrity, keyboard support, responsive behavior, and performance as part of product quality."
   },
   {
     title: "Usability testing",
@@ -94,10 +140,10 @@ const processAreas = [
 ];
 
 const currentCaseStudy = {
-  title: "Booking Experience Redesign",
+  title: "Food Delivery Comparison Experience",
   summary:
-    "A detailed product story covering research, journey clarity, accessibility, usability testing, prototyping, and handover.",
-  tags: ["Research", "Journey mapping", "Accessibility", "Testing"],
+    "A concept case study showing how AI-supported UX can help customers compare food delivery providers faster, with fewer checkout surprises.",
+  tags: ["Concept", "Mobile UX", "AI workflow", "Service design"],
   href: "/work/school-of-ux-booking/"
 };
 ---
@@ -109,7 +155,7 @@ const currentCaseStudy = {
 >
   <section class="hero-section" data-reveal>
     <div class="hero-content">
-      <p class="eyebrow">UX & product designer</p>
+      <p class="eyebrow">UX, mobile, and AI-minded product design</p>
       <h1>{site.name}</h1>
       <p class="hero-lede">{site.summary}</p>
       <p class="supporting-copy">{site.intro}</p>
@@ -121,7 +167,7 @@ const currentCaseStudy = {
     </div>
 
     <aside class="hero-card">
-      <p>Research, design, and prototyping for products that need clarity before they scale.</p>
+      <p>Research, design, prototyping, and AI-enabled delivery for products that need clarity before they scale.</p>
       <div class="hero-card-meta">
         <span>{site.location}</span>
         <span>{site.role}</span>
@@ -136,11 +182,12 @@ const currentCaseStudy = {
 
     <div class="about-copy">
       <p class="eyebrow">About</p>
-      <h2>Designing digital products that feel clear, useful, and complete.</h2>
+      <h2>Designing products with a technical backbone and a human-centered lens.</h2>
       <p>{site.mission}</p>
       <p>
-        I bring usability, creativity, and teamwork into product work, with a strong interest in
-        travel, technology, design systems, and human insight.
+        My background spans IT infrastructure, mobile development, UX research, product design,
+        prototyping, and developer handover. That mix helps me connect strategy, design quality,
+        and implementation reality instead of treating them as separate worlds.
       </p>
 
       <div class="stats-grid">
@@ -154,6 +201,36 @@ const currentCaseStudy = {
     </div>
   </section>
 
+  <section class="experience-section section-space" data-reveal>
+    <div class="section-intro">
+      <p class="eyebrow">Experience system</p>
+      <h2>From IT support to senior product design.</h2>
+      <p>
+        The story is not only visual design. It is a progression from technical systems and mobile
+        development into UX, research, and AI-supported product delivery.
+      </p>
+    </div>
+
+    <div class="experience-layout">
+      <div class="timeline">
+        {timelineItems.map((item) => (
+          <article class="timeline-item">
+            <span>{item.period}</span>
+            <h3>{item.title}</h3>
+            <p>{item.body}</p>
+          </article>
+        ))}
+      </div>
+
+      <aside class="tool-panel">
+        <p class="eyebrow">Tools and methods</p>
+        <div class="tool-cloud">
+          {toolGroups.map((tool) => <span>{tool}</span>)}
+        </div>
+      </aside>
+    </div>
+  </section>
+
   <section id="work" class="work-section section-space" data-reveal>
     <div class="section-intro">
       <p class="eyebrow">Selected work</p>
@@ -164,12 +241,27 @@ const currentCaseStudy = {
       </p>
     </div>
 
-    <div class="project-grid">
+    <div class="project-grid project-grid-featured">
       {projectPreviews.map((project) => (
         <article class="project-card">
-          <div class="project-image-shell">
-            <img src={project.image} alt={project.imageAlt} class="project-image" loading="lazy" />
-          </div>
+          {project.image ? (
+            <div class="project-image-shell">
+              <img src={project.image} alt={project.imageAlt} class="project-image" loading="lazy" />
+            </div>
+          ) : (
+            <div class="project-image-shell project-visual-delivery" aria-hidden="true">
+              <div class="delivery-phone delivery-phone-left">
+                <span>Wolt</span>
+                <strong>24 min</strong>
+                <small>EUR 15.80 total</small>
+              </div>
+              <div class="delivery-phone delivery-phone-right">
+                <span>Lieferando</span>
+                <strong>31 min</strong>
+                <small>EUR 13.40 total</small>
+              </div>
+            </div>
+          )}
 
           <div class="project-body">
             <p class="eyebrow eyebrow-inline">{project.eyebrow}</p>
@@ -214,6 +306,11 @@ const currentCaseStudy = {
     </div>
 
     <div class="case-study-actions">
+      <div class="mini-comparison" aria-hidden="true">
+        <span class="mini-dot"></span>
+        <strong>Best match</strong>
+        <p>Lower fee, faster ETA, available now</p>
+      </div>
       <ul class="tag-list" aria-label="Current case study tags">
         {currentCaseStudy.tags.map((tag) => <li>{tag}</li>)}
       </ul>
