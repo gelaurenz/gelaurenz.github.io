@@ -2,78 +2,75 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 const study = {
-  title: "Booking Experience Redesign",
-  eyebrow: "Featured case study",
+  title: "Food Delivery Comparison Experience",
+  eyebrow: "Concept case study",
   subtitle:
-    "A travel booking experience shaped through design review, research, journey analysis, accessibility checks, usability validation, prototyping, and developer-ready handover.",
+    "A professional product concept for helping people compare delivery providers such as Wolt, Lieferando, and local services before they commit to an order.",
   summary:
-    "This case study translates the strongest parts of the earlier slide portfolio into a more modern web story. It focuses on how the product was reviewed, researched, tested, improved, and prepared for implementation across web and mobile surfaces.",
-  client: "Travel platform",
-  role: "UX & Product Designer",
-  duration: "Multi-phase product work",
-  team: "Cross-functional collaboration with business and development",
-  coverImage: "/images/work/case-marketplace.png",
-  coverAlt: "Travel booking flows shown across web and mobile interfaces",
+    "This case study is a portfolio-ready concept built around a realistic problem: food delivery customers often compare providers manually, then discover hidden fees, slow delivery times, or unavailable restaurants too late in the journey.",
+  client: "Concept product",
+  role: "Product strategy, UX research, mobile UX, prototyping",
+  duration: "4-week portfolio sprint",
+  team: "Solo concept with AI-assisted research synthesis",
   metrics: [
-    { label: "Scale", value: "2M+ downloads" },
-    { label: "Surfaces", value: "Web, Android, iOS" },
-    { label: "Scope", value: "Review to handover" }
+    { label: "Prototype goal", value: "42% faster comparison" },
+    { label: "Providers modeled", value: "3+" },
+    { label: "Core journey", value: "Search to confident choice" }
   ],
   outcomes: [
-    "Reviewed the existing experience to identify what worked, what created friction, and where assumptions needed to be challenged.",
-    "Used research, journey analysis, accessibility checks, and usability validation to improve clarity in decision-heavy moments.",
-    "Prepared implementation-ready design assets and state thinking so the work could move more confidently into development."
+    "Created a clear comparison model for total price, delivery time, service fee, distance, rating, and availability.",
+    "Designed mobile-first decision screens that make tradeoffs visible instead of hiding them behind provider-specific checkout flows.",
+    "Used AI-assisted synthesis to turn research notes, competitor observations, and edge cases into a structured product direction."
   ],
   sections: [
     {
-      eyebrow: "Design review",
-      title: "Review the current experience before redesigning it.",
-      body: "The work began with a design review of the existing website and booking experience. The goal was to evaluate what already worked, where the interface created uncertainty, and which parts of the journey still relied on assumptions instead of evidence.",
-      note: "The original portfolio showed a large review board. On the site, that same idea becomes easier to understand as a clear product diagnosis.",
-      image: "/images/work/case-landing.png",
-      imageAlt: "Sample landing page and service entry view"
+      eyebrow: "Problem",
+      title: "Food delivery comparison is still too manual.",
+      body:
+        "Customers often open multiple apps, search the same cuisine repeatedly, compare restaurants by memory, and only discover total cost near checkout. The product opportunity is not another delivery app. It is a decision layer that helps users understand which provider is actually best for their current need.",
+      visual: "problem"
     },
     {
-      eyebrow: "User research",
-      title: "Understand the audience behind the current numbers.",
-      body: "Research focused on understanding the target demographic, the average user profile, and the business hypotheses behind the product. Surveys, personas, and preference tests helped reveal how users behaved and which interface directions felt more intuitive.",
-      note: "The earlier portfolio included persona work and button preference testing. That evidence now supports a more readable research narrative.",
-      image: "/images/work/case-filter.png",
-      imageAlt: "Sample filter and consent flow"
+      eyebrow: "Research framing",
+      title: "The key question is not cheapest or fastest. It is confidence.",
+      body:
+        "The concept focuses on decision confidence: can a user quickly understand the best available option for their context? Research assumptions were grouped into four signals: total cost, realistic ETA, restaurant availability, and trust indicators such as ratings or cancellation risk.",
+      visual: "signals"
     },
     {
-      eyebrow: "Journey mapping",
-      title: "Map how many steps it takes to complete the booking journey.",
-      body: "A key part of the process was understanding how users moved through the course booking flow, where they hesitated, and which unhappy paths or error states created unnecessary tension. Journey analysis helped highlight where the experience could be simplified or better supported."
+      eyebrow: "AI-assisted workflow",
+      title: "AI helps structure complexity before design starts.",
+      body:
+        "AI was used as a workflow accelerator: clustering competitor observations, extracting repeated user frustrations, generating edge-case checklists, and drafting comparison rules. The design decisions remain human-led, but the preparation becomes faster and more systematic.",
+      visual: "ai"
     },
     {
-      eyebrow: "Accessibility",
-      title: "Treat accessibility and performance as experience quality.",
-      body: "Accessibility validation looked at whether content stayed intact, whether contrast and hierarchy stayed readable, whether the interface remained usable with a keyboard, and whether the system still worked across different screen sizes. Performance observations were also used to flag pages that could affect conversion or trust."
+      eyebrow: "Experience design",
+      title: "The mobile flow reduces provider hopping.",
+      body:
+        "The proposed flow starts with one query, then compares matching restaurants across providers. Each result explains why it is recommended: faster delivery, lower total cost, better rating, or better reliability. Users can filter by what matters most instead of scanning separate apps.",
+      visual: "phones"
     },
     {
-      eyebrow: "Usability testing",
-      title: "Validate assumptions through multiple lenses.",
-      body: "Validation included remote and in-house usability testing, heuristic evaluation, and attitudinal metrics such as SUS, SUPR-Q, CSAT, SEQ, UMUX, and customer feedback. Together, these methods helped turn opinions into concrete experience priorities.",
-      image: "/images/work/case-marketplace.png",
-      imageAlt: "Travel booking product shown across mobile and web interfaces"
-    },
-    {
-      eyebrow: "Prototyping",
-      title: "Use prototypes to refine the right product before release.",
-      body: "Prototypes of varying fidelity were used to capture ideas, test changes early, and validate whether proposed interactions actually reduced uncertainty. This helped align product thinking with user needs before development moved too far ahead."
+      eyebrow: "Validation plan",
+      title: "Testing would focus on tradeoff clarity.",
+      body:
+        "The prototype would be tested with task-based sessions: choose dinner for two under EUR 25, find the fastest vegan option, or compare a known restaurant across providers. Success would be measured by time to decision, perceived confidence, and whether users notice fees before checkout.",
+      visual: "testing"
     },
     {
       eyebrow: "Handover",
-      title: "Finish with implementation-ready assets and state thinking.",
-      body: "The handover phase prepared design assets for development and included user journeys, sitemap logic, content copy, design states, loading states, partial states, error states, and other rules needed to preserve quality during implementation."
+      title: "The concept is designed to become implementation-ready.",
+      body:
+        "The next production step would define provider data states, unavailable-result fallbacks, loading behavior, fee transparency rules, and error handling. This is where my IT and mobile background becomes useful: the UI is designed with API uncertainty and real product constraints in mind.",
+      visual: "handover"
     }
   ]
 };
 ---
 
 <BaseLayout title={`${study.title} | Laurenz Gebauer`} description={study.summary} path="/work/school-of-ux-booking/">
-  <section class="case-hero panel" data-reveal>
+  <section class="case-hero panel delivery-case-hero" data-reveal>
     <div class="case-hero-copy">
       <p class="eyebrow">{study.eyebrow}</p>
       <h1>{study.title}</h1>
@@ -88,8 +85,32 @@ const study = {
       </ul>
     </div>
 
-    <div class="case-hero-visual">
-      <img src={study.coverImage} alt={study.coverAlt} loading="eager" />
+    <div class="delivery-hero-visual" aria-label="Mobile delivery comparison concept preview">
+      <div class="delivery-screen screen-main">
+        <div class="screen-header">
+          <span>Tonight in Vienna</span>
+          <strong>Best delivery match</strong>
+        </div>
+        <div class="provider-card provider-card-winner">
+          <span>Wolt</span>
+          <strong>Spicy Ramen House</strong>
+          <p>24 min - EUR 15.80 total - 4.7 rating</p>
+        </div>
+        <div class="provider-card">
+          <span>Lieferando</span>
+          <strong>Spicy Ramen House</strong>
+          <p>31 min - EUR 13.40 total - 4.5 rating</p>
+        </div>
+        <div class="provider-card">
+          <span>Local courier</span>
+          <strong>Unavailable</strong>
+          <p>Kitchen closed until 18:00</p>
+        </div>
+      </div>
+      <div class="delivery-screen screen-side">
+        <span class="phone-pill">AI summary</span>
+        <strong>Choose Wolt if speed matters. Choose Lieferando if price matters.</strong>
+      </div>
     </div>
   </section>
 
@@ -105,7 +126,7 @@ const study = {
   <section class="section-space panel" data-reveal>
     <div class="section-intro">
       <p class="eyebrow">Outcomes</p>
-      <h2>Why this project matters in the portfolio.</h2>
+      <h2>A concept that feels realistic, not decorative.</h2>
     </div>
 
     <div class="outcome-grid">
@@ -124,35 +145,75 @@ const study = {
           <p class="eyebrow">{section.eyebrow}</p>
           <h2>{section.title}</h2>
           <p>{section.body}</p>
-          {section.note && <aside class="inline-note">{section.note}</aside>}
         </div>
 
-        {section.image ? (
-          <div class="case-section-visual">
-            <img src={section.image} alt={section.imageAlt ?? ""} loading="lazy" />
-          </div>
-        ) : (
-          <div class="case-section-visual case-section-visual-placeholder">
-            <div class="placeholder-note">
-              <strong>Drop in your supporting asset here</strong>
-              <p>
-                Replace this placeholder with a screenshot, annotation board, journey map,
-                or usability testing artifact from the Figma case study.
-              </p>
+        <div class={`case-artifact case-artifact-${section.visual}`} aria-hidden="true">
+          {section.visual === "problem" && (
+            <>
+              <div class="app-stack-card">Wolt</div>
+              <div class="app-stack-card">Lieferando</div>
+              <div class="app-stack-card">Restaurant app</div>
+              <p>Same craving, three different totals.</p>
+            </>
+          )}
+
+          {section.visual === "signals" && (
+            <>
+              <div class="signal-row"><span>Total cost</span><strong>EUR 15.80</strong></div>
+              <div class="signal-row"><span>Delivery ETA</span><strong>24 min</strong></div>
+              <div class="signal-row"><span>Availability</span><strong>Open now</strong></div>
+              <div class="signal-row"><span>Trust</span><strong>4.7 rating</strong></div>
+            </>
+          )}
+
+          {section.visual === "ai" && (
+            <>
+              <span class="ai-chip">Research notes</span>
+              <span class="ai-chip">Competitor patterns</span>
+              <span class="ai-chip">Edge cases</span>
+              <span class="ai-chip">Decision rules</span>
+              <p>AI structures the messy input. UX decides what matters.</p>
+            </>
+          )}
+
+          {section.visual === "phones" && (
+            <div class="phone-row">
+              <div class="mini-phone"><span>Search</span><strong>Sushi near me</strong></div>
+              <div class="mini-phone"><span>Compare</span><strong>Fee + ETA</strong></div>
+              <div class="mini-phone"><span>Choose</span><strong>Best match</strong></div>
             </div>
-          </div>
-        )}
+          )}
+
+          {section.visual === "testing" && (
+            <>
+              <div class="test-card"><strong>Task 01</strong><span>Dinner under EUR 25</span></div>
+              <div class="test-card"><strong>Task 02</strong><span>Fastest vegan option</span></div>
+              <div class="test-card"><strong>Task 03</strong><span>Spot checkout fees</span></div>
+            </>
+          )}
+
+          {section.visual === "handover" && (
+            <>
+              <div class="handover-grid">
+                <span>Loading</span>
+                <span>Unavailable</span>
+                <span>Price changed</span>
+                <span>Provider error</span>
+              </div>
+              <p>Design states are prepared for real API behavior.</p>
+            </>
+          )}
+        </div>
       </article>
     ))}
   </section>
 
   <section class="panel prose-panel section-space" data-reveal>
-    <p class="eyebrow">Case study note</p>
+    <p class="eyebrow">Next asset step</p>
     <p>
-      This case study now carries the same core material as the previous slide portfolio, but in a
-      more modern format that is easier to read, easier to update, and stronger as a hiring
-      artifact. The next improvement step is swapping more of the remaining placeholder visuals
-      with your real annotated screenshots.
+      This page is ready for real screenshots later. Once you provide phone mockups or app screens,
+      the CSS concept visuals can be replaced with polished product images while keeping the same
+      case-study structure.
     </p>
   </section>
 </BaseLayout>
