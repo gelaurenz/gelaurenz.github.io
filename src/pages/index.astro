@@ -11,12 +11,12 @@ const site = {
   heroHeadline:
     "Product designer turning complex technical systems into clear, usable digital experiences.",
   heroText:
-    "I combine a background in IT support, mobile computing, and HCI with UX research, prototyping, and service design to create practical digital products.",
+    "I combine technical understanding with UX research, prototyping, and product thinking to design practical digital experiences.",
   aboutHeadline:
     "I design digital products where technical complexity meets human needs.",
   aboutText:
     "My background in IT support, mobile computing, and HCI helps me understand both user pain points and technical constraints. I use research, prototyping, and structured design methods to turn unclear problems into usable product experiences.",
-  availability: "Available for UX/Product Design roles in Austria and Germany, as well as remote.",
+  availability: "Available for UX/Product Design roles in Austria, Germany, and remote.",
   contactLinks: [
     { label: "Email", href: "mailto:laurenz.gebauer@gmx.at" },
     { label: "Call", href: "tel:+436606422328" },
@@ -26,9 +26,16 @@ const site = {
 };
 
 const heroStats = [
-  { value: "2M+", label: "downloads across product surfaces" },
-  { value: "10+", label: "years across IT, mobile, and UX" },
-  { value: "MSc", label: "Human-Centered Computing" }
+  { value: "MSc", label: "Human-Centered Computing" },
+  { value: "IT + mobile", label: "Background in support and mobile computing" },
+  { value: "UX methods", label: "Research, prototyping, and service design" }
+];
+
+const trustSignals = [
+  "MSc Human-Centered Computing",
+  "Background in IT support and mobile computing",
+  "UX research, prototyping, and service design",
+  "Available in Austria, Germany, and remote"
 ];
 
 const timelineItems = [
@@ -72,44 +79,44 @@ const toolGroups = [
 const projectPreviews = [
   {
     title: "Travel booking platform",
-    problem:
-      "Customers needed clearer search, filtering, and checkout flows across web and native apps.",
-    role: "UX/UI design for web, Android, and iOS booking experiences.",
-    methods: "Design review, interaction design, prototyping, handoff",
-    outcome: "Reduced checkout steps from 6 to 4 in the redesigned flow.",
-    tags: ["Interaction Design", "Mobile UX", "Prototyping", "Handoff"],
+    summary:
+      "Redesigned a travel booking flow to reduce decision overload across web and mobile.",
+    role: "UX Research, UI Design",
+    methods: "Journey mapping, wireframes, prototype",
+    outcome: "Identified 7 usability issues in testing",
+    tags: ["Interaction Design", "Mobile UX", "Prototyping"],
     image: "/images/work/project-ecommerce-web.jpg",
     imageAlt: "Travel booking platform screens across web and mobile"
   },
   {
     title: "Online challenge platform",
-    problem:
-      "Teams needed a simpler way to create, share, and participate in online challenges.",
-    role: "Led UX structure, mobile-first flows, and implementation alignment.",
-    methods: "User flows, wireframing, content system, mobile UX",
-    outcome: "Created 3 user flows and 2 interactive prototypes for validation.",
+    summary:
+      "Created a mobile-first product structure for creating, sharing, and joining challenges.",
+    role: "Product Design, Mobile UX",
+    methods: "User flows, wireframes, prototype",
+    outcome: "Created 3 user flows and 2 prototype iterations",
     tags: ["Service Design", "Mobile UX", "Interaction Design"],
     image: "/images/work/project-lean.jpg",
     imageAlt: "Mobile challenge app screens"
   },
   {
     title: "Interactive tour application",
-    problem:
-      "Tour content needed to feel engaging, location-aware, and easy to follow on Android.",
-    role: "Freelance designer and Android developer for the mobile experience.",
-    methods: "Android design, prototyping, gamified flows, usability review",
-    outcome: "Identified 7 usability issues before the next prototype iteration.",
+    summary:
+      "Designed an Android tour experience that makes location-based content easier to follow.",
+    role: "UX Design, Android Development",
+    methods: "Prototype, usability review, mobile UI",
+    outcome: "Improved navigation clarity before implementation",
     tags: ["Mobile UX", "Prototyping", "Usability Testing"],
     image: "/images/work/project-gamification.jpg",
     imageAlt: "Gamified mobile tour interaction screens"
   },
   {
     title: "Food delivery comparison",
-    problem:
-      "Users compare delivery providers manually and often discover fees too late.",
-    role: "Concept case study covering UX research, service design, and prototype logic.",
-    methods: "Journey mapping, AI-assisted synthesis, mobile prototyping",
-    outcome: "Tested with 5 users to improve comparison clarity across restaurant options.",
+    summary:
+      "Explored a comparison experience for delivery options across multiple providers.",
+    role: "UX Research, Service Design",
+    methods: "Journey mapping, prototype, user testing",
+    outcome: "Tested with 5 users for comparison clarity",
     tags: ["UX Research", "Service Design", "Mobile UX", "Usability Testing"],
     visual: "delivery"
   }
@@ -118,39 +125,40 @@ const projectPreviews = [
 const processAreas = [
   {
     title: "Product diagnosis",
-    body: "Review flows, assumptions, constraints, and business goals before solution work."
+    body: "I clarify the product goal, constraints, target users, and key usability risks before moving into solutions."
   },
   {
     title: "User research",
-    body: "Use interviews, surveys, analytics signals, and testing to understand real needs."
+    body: "I use interviews, desk research, and usability signals to understand user needs and decision points."
   },
   {
     title: "AI-assisted synthesis",
-    body: "Structure notes, patterns, and edge cases faster without replacing judgment."
+    body: "I use AI to structure research notes, cluster findings, and speed up early synthesis."
   },
   {
     title: "Journey mapping",
-    body: "Map decision points, pain points, error states, and opportunities."
+    body: "I map the current experience to identify friction, gaps, and opportunities across the user flow."
   },
   {
     title: "Usability testing",
-    body: "Validate prototypes with tasks, feedback, and measurable usability signals."
+    body: "I test prototypes with users to validate assumptions and improve interaction clarity."
   },
   {
     title: "Handoff",
-    body: "Prepare flows, states, specs, and implementation details for development."
+    body: "I prepare flows, UI states, and implementation notes so designs can move into development."
   }
 ];
 
 const featuredCaseStudy = {
   title: "Food Delivery Comparison Experience",
-  context: "A concept product for comparing providers such as Wolt, Lieferando, and local services.",
+  summary:
+    "A mobile-first concept for comparing food delivery services by price, delivery time, fees, and usability.",
+  proofPoints: ["5 user tests", "4 comparison criteria", "2 prototype iterations"],
+  context: "Users often compare delivery options manually across multiple apps.",
   problem:
-    "Customers often switch between apps and only understand total cost, delivery time, or availability late in the journey.",
-  role: "Product strategy, UX research, service design, mobile UX, and prototyping.",
-  process: "Mapped the decision journey, defined comparison signals, and built a mobile-first prototype structure.",
-  outcome:
-    "Prototype tested with 5 users and improved comparison clarity across restaurant options.",
+    "Important decision factors such as fees, delivery time, and availability are hard to compare quickly.",
+  process: "Mapped the comparison journey, designed mobile flows, and tested a clickable prototype.",
+  outcome: "Improved clarity around restaurant and delivery option comparison.",
   href: "/work/school-of-ux-booking/",
   tags: ["UX Research", "Service Design", "Mobile UX", "Prototyping"]
 };
@@ -175,12 +183,18 @@ const featuredCaseStudy = {
     </div>
 
     <aside class="hero-card">
-      <p>Research, usability, product thinking, and technical understanding for practical digital products.</p>
+      <div>
+        <span class="hero-card-label">Focus areas</span>
+        <p>UX Research &middot; Product Design &middot; Mobile UX &middot; Service Design</p>
+      </div>
       <div class="hero-card-meta">
-        <span>{site.location}</span>
-        <span>{site.role}</span>
+        <span>Available in Austria, Germany & remote</span>
       </div>
     </aside>
+  </section>
+
+  <section class="trust-strip" aria-label="Trust signals" data-reveal>
+    {trustSignals.map((signal) => <span>{signal}</span>)}
   </section>
 
   <section id="about" class="about-section section-space" data-reveal>
@@ -237,11 +251,8 @@ const featuredCaseStudy = {
   <section id="work" class="work-section section-space" data-reveal>
     <div class="section-intro">
       <p class="eyebrow">Selected work</p>
-      <h2>Evidence-based project previews for product and UX work.</h2>
-      <p>
-        These cards are structured so real project details, metrics, and screenshots can be
-        replaced easily later.
-      </p>
+      <h2>Selected UX/Product Design case studies</h2>
+      <p>Each project highlights the problem, my role, methods, and design outcomes.</p>
     </div>
 
     <div class="project-grid">
@@ -249,10 +260,12 @@ const featuredCaseStudy = {
         <article class="project-card">
           {project.image ? (
             <div class="project-image-shell">
+              <span class="preview-label">Case preview</span>
               <img src={project.image} alt={project.imageAlt} class="project-image" loading="lazy" />
             </div>
           ) : (
             <div class="project-image-shell project-visual-delivery" aria-hidden="true">
+              <span class="preview-label">Case preview</span>
               <div class="delivery-phone delivery-phone-left">
                 <span>Wolt</span>
                 <strong>24 min</strong>
@@ -268,11 +281,8 @@ const featuredCaseStudy = {
 
           <div class="project-body">
             <h3>{project.title}</h3>
+            <p>{project.summary}</p>
             <dl class="project-facts">
-              <div>
-                <dt>Problem</dt>
-                <dd>{project.problem}</dd>
-              </div>
               <div>
                 <dt>Role</dt>
                 <dd>{project.role}</dd>
@@ -300,16 +310,20 @@ const featuredCaseStudy = {
     <div class="featured-case-copy">
       <p class="eyebrow">Featured case study</p>
       <h2>{featuredCaseStudy.title}</h2>
-      <p>{featuredCaseStudy.context}</p>
+      <p>{featuredCaseStudy.summary}</p>
+
+      <div class="proof-point-grid" aria-label="Featured case study proof points">
+        {featuredCaseStudy.proofPoints.map((proof) => <span>{proof}</span>)}
+      </div>
 
       <div class="featured-case-grid">
         <article>
-          <span>Problem</span>
-          <p>{featuredCaseStudy.problem}</p>
+          <span>Context</span>
+          <p>{featuredCaseStudy.context}</p>
         </article>
         <article>
-          <span>Role</span>
-          <p>{featuredCaseStudy.role}</p>
+          <span>Problem</span>
+          <p>{featuredCaseStudy.problem}</p>
         </article>
         <article>
           <span>Process</span>
@@ -323,10 +337,19 @@ const featuredCaseStudy = {
     </div>
 
     <aside class="featured-case-aside">
-      <div class="mini-comparison" aria-hidden="true">
-        <span class="mini-dot"></span>
-        <strong>Best match</strong>
-        <p>Lower fee, faster ETA, available now</p>
+      <div class="featured-preview" aria-hidden="true">
+        <div class="featured-phone">
+          <span>Compare</span>
+          <strong>Best delivery match</strong>
+          <div class="featured-result is-active">
+            <small>Wolt</small>
+            <b>24 min &middot; EUR 15.80</b>
+          </div>
+          <div class="featured-result">
+            <small>Lieferando</small>
+            <b>31 min &middot; EUR 13.40</b>
+          </div>
+        </div>
       </div>
       <ul class="tag-list" aria-label="Featured case study tags">
         {featuredCaseStudy.tags.map((tag) => <li>{tag}</li>)}
@@ -340,7 +363,7 @@ const featuredCaseStudy = {
     <div class="section-intro">
       <p class="eyebrow">Process</p>
       <h2>A clear UX process from diagnosis to handoff.</h2>
-      <p>Short, practical steps for turning unclear product problems into testable design decisions.</p>
+      <p>A practical process for turning unclear product problems into testable design decisions.</p>
     </div>
 
     <div class="method-grid">
@@ -357,7 +380,7 @@ const featuredCaseStudy = {
   <section id="contact" class="contact-section section-space" data-reveal>
     <div class="contact-copy">
       <p class="eyebrow">Contact</p>
-      <h2>Let us build something clear and usable.</h2>
+      <h2>Let's build clear, usable digital products.</h2>
       <p>{site.availability}</p>
 
       <div class="contact-links">
