@@ -42,22 +42,22 @@ const timelineItems = [
   {
     period: "2012 - 2014",
     title: "IT services foundation",
-    body: "Application support, server operations, and network support."
+    body: "Supported applications, server operations, and network troubleshooting."
   },
   {
     period: "2016 - 2021",
     title: "Mobile computing and HCI",
-    body: "BSc Mobile Computing and MSc Human-Centered Computing at FH Hagenberg."
+    body: "Studied mobile computing and human-centered design at FH Hagenberg."
   },
   {
     period: "2020 - 2021",
     title: "Android product building",
-    body: "Designed and developed an Android app for interactive tours."
+    body: "Designed and developed an Android app for interactive tour experiences."
   },
   {
     period: "2022 - now",
     title: "Senior product design",
-    body: "UX/UI for web, Android, and iOS travel products at Invia Group."
+    body: "Designing web, Android, and iOS travel products at Invia Group."
   }
 ];
 
@@ -260,12 +260,10 @@ const featuredCaseStudy = {
         <article class="project-card">
           {project.image ? (
             <div class="project-image-shell">
-              <span class="preview-label">Case preview</span>
               <img src={project.image} alt={project.imageAlt} class="project-image" loading="lazy" />
             </div>
           ) : (
             <div class="project-image-shell project-visual-delivery" aria-hidden="true">
-              <span class="preview-label">Case preview</span>
               <div class="delivery-phone delivery-phone-left">
                 <span>Wolt</span>
                 <strong>24 min</strong>
