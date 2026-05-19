@@ -2,7 +2,6 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const profileImage = "/images/profile-laurenz.jpg";
-const cvHref = "/Laurenz_Gebauer_CV.pdf";
 
 const site = {
   name: "Laurenz Gebauer",
@@ -17,12 +16,7 @@ const site = {
   aboutText:
     "My background in IT support, mobile computing, and HCI helps me understand both user pain points and technical constraints. I use research, prototyping, and structured design methods to turn unclear problems into usable product experiences.",
   availability: "Available for UX/Product Design roles in Austria, Germany, and remote.",
-  contactLinks: [
-    { label: "Email", href: "mailto:laurenz.gebauer@gmx.at" },
-    { label: "Call", href: "tel:+436606422328" },
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/laurenz-gebauer/" },
-    { label: "Download CV", href: cvHref, download: true }
-  ]
+  protectedActions: ["Email", "Call", "LinkedIn", "Download CV"]
 };
 
 const heroStats = [
@@ -178,7 +172,7 @@ const featuredCaseStudy = {
       <div class="button-row">
         <a href="#work" class="button button-primary">View selected work</a>
         <a href="#contact" class="button button-secondary">Get in touch</a>
-        <a href={cvHref} class="button button-secondary" download>Download CV</a>
+        <button type="button" class="button button-secondary" data-unlock-trigger>Download CV</button>
       </div>
     </div>
 
@@ -381,16 +375,9 @@ const featuredCaseStudy = {
       <h2>Let's build clear, usable digital products.</h2>
       <p>{site.availability}</p>
 
-      <div class="contact-links">
-        {site.contactLinks.map((link) => (
-          <a
-            href={link.href}
-            target={link.href.startsWith("http") ? "_blank" : undefined}
-            rel={link.href.startsWith("http") ? "noreferrer" : undefined}
-            download={link.download}
-          >
-            {link.label}
-          </a>
+      <div class="contact-links" data-contact-actions>
+        {site.protectedActions.map((label) => (
+          <button type="button" data-unlock-trigger>{label}</button>
         ))}
       </div>
     </div>
@@ -398,13 +385,169 @@ const featuredCaseStudy = {
     <aside class="contact-profile-card">
       <img src={profileImage} alt="Portrait of Laurenz Gebauer" class="contact-avatar" loading="lazy" />
       <div>
-        <h3>Laurenz Gebauer</h3>
-        <p>
-          Senior Product Designer<br />
-          +43 660 642 2328<br />
-          laurenz.gebauer@gmx.at
+        <h3 data-private-name>Contact details locked</h3>
+        <p data-private-details>
+          Enter the portfolio password to reveal direct contact details and the CV download.
         </p>
       </div>
     </aside>
   </section>
+
+  <dialog class="unlock-dialog" data-unlock-dialog>
+    <form method="dialog" class="unlock-card" data-unlock-form>
+      <div>
+        <p class="eyebrow">Private contact</p>
+        <h2>Unlock contact details</h2>
+        <p>
+          Please enter the portfolio password to reveal email, phone, LinkedIn, and CV access.
+        </p>
+      </div>
+
+      <label class="unlock-field">
+        <span>Password</span>
+        <input type="password" autocomplete="current-password" data-unlock-input />
+      </label>
+
+      <p class="unlock-error" data-unlock-error hidden>That password does not match. Please try again.</p>
+
+      <div class="unlock-actions">
+        <button type="button" class="button button-primary" data-unlock-submit>Unlock</button>
+        <button type="button" class="button button-secondary" data-unlock-close>Cancel</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script is:inline>
+    const PRIVATE_CONTACT_PAYLOAD = {
+      salt: "Iz4DcHwKOuKYY4P/F8e0sA==",
+      iv: "7M5q7yDyfvWXTOK4",
+      data:
+        "QvcE3pwV6Fifm2f9WZ6fHO2l0IoGcGuJfdOuUzKc0yEJANodSzv9nr0UdlTTp+lyGQ6f7k0XIrtzYr/FjYKMqWoFC8qKtpiTkaxFj+oK2GgNrQ5HMNOhcghNXWY7DIi+6lzaFh5Nl3igIQ9U5ISlbQlsl+CfRgo8pEpcpA6Ik8V83CgsiBCCpw5NXPpLNM48yldBFragKk1ErkfqQs5gaFv7uoZTX/jwSH3LdSMs6qLJib7c/4HNNtFvI/3RBr6I10P2C5DYLZQLFB6W8kq+uOplEGNt18red6g+OrbVQTxVOpWrKA0h/J/o9ZqQDd6GFFsFWFBnu75fpBajnzKrRkpqF/2b21j9NPHu45mPVZ3L0JS8ndxQCXJ8Cdkdbo7ItcPWVgvMZyKELOzbiWdCZxAOzgkr1R52ze+37mIROQjHt7RojkcIGvTuHP8RISNSfWvsru1J4dm1EsZdpuzDqpwmOEFx4Y2wo/PNyYZlBUBf4OnK7fvWCYqCGVy+2PWB8v23lyIVZ6Eb5cfdChVumfc="
+    };
+
+    let unlockedContact = null;
+
+    const fromBase64 = (value) => Uint8Array.from(atob(value), (character) => character.charCodeAt(0));
+
+    const decryptPrivateContact = async (password) => {
+      const keyMaterial = await crypto.subtle.importKey(
+        "raw",
+        new TextEncoder().encode(password),
+        "PBKDF2",
+        false,
+        ["deriveKey"]
+      );
+
+      const key = await crypto.subtle.deriveKey(
+        {
+          name: "PBKDF2",
+          salt: fromBase64(PRIVATE_CONTACT_PAYLOAD.salt),
+          iterations: 150000,
+          hash: "SHA-256"
+        },
+        keyMaterial,
+        { name: "AES-GCM", length: 256 },
+        false,
+        ["decrypt"]
+      );
+
+      const decrypted = await crypto.subtle.decrypt(
+        { name: "AES-GCM", iv: fromBase64(PRIVATE_CONTACT_PAYLOAD.iv) },
+        key,
+        fromBase64(PRIVATE_CONTACT_PAYLOAD.data)
+      );
+
+      return JSON.parse(new TextDecoder().decode(decrypted));
+    };
+
+    const renderPrivateContact = (privateContact = unlockedContact) => {
+      if (!privateContact) {
+        return;
+      }
+
+      const nameTarget = document.querySelector("[data-private-name]");
+      const detailTarget = document.querySelector("[data-private-details]");
+      const actionsTarget = document.querySelector("[data-contact-actions]");
+
+      if (nameTarget) {
+        nameTarget.textContent = privateContact.name;
+      }
+
+      if (detailTarget) {
+        detailTarget.innerHTML = privateContact.details.join("<br />");
+      }
+
+      if (actionsTarget) {
+        actionsTarget.innerHTML = "";
+
+        for (const action of privateContact.actions) {
+          const link = document.createElement("a");
+          link.href = action.href;
+          link.textContent = action.label;
+
+          if (action.external) {
+            link.target = "_blank";
+            link.rel = "noreferrer";
+          }
+
+          if (action.download) {
+            link.setAttribute("download", "");
+          }
+
+          actionsTarget.append(link);
+        }
+      }
+    };
+
+    const dialog = document.querySelector("[data-unlock-dialog]");
+    const input = document.querySelector("[data-unlock-input]");
+    const error = document.querySelector("[data-unlock-error]");
+
+    const openUnlockDialog = () => {
+      if (unlockedContact) {
+        renderPrivateContact();
+        return;
+      }
+
+      if (dialog instanceof HTMLDialogElement) {
+        dialog.showModal();
+        input?.focus();
+      }
+    };
+
+    const unlockContact = async () => {
+      const value = input?.value ?? "";
+      try {
+        unlockedContact = await decryptPrivateContact(value);
+      } catch {
+        if (error) {
+          error.hidden = false;
+        }
+        return;
+      }
+
+      renderPrivateContact();
+      dialog?.close();
+    };
+
+    document.querySelectorAll("[data-unlock-trigger]").forEach((trigger) => {
+      trigger.addEventListener("click", openUnlockDialog);
+    });
+
+    document.querySelector("[data-unlock-submit]")?.addEventListener("click", unlockContact);
+    document.querySelector("[data-unlock-close]")?.addEventListener("click", () => dialog?.close());
+    document.querySelector("[data-unlock-form]")?.addEventListener("submit", (event) => {
+      event.preventDefault();
+      unlockContact();
+    });
+
+    dialog?.addEventListener("close", () => {
+      if (input) {
+        input.value = "";
+      }
+      if (error) {
+        error.hidden = true;
+      }
+    });
+  </script>
 </BaseLayout>
