@@ -25,13 +25,6 @@ const heroStats = [
   { value: "UX methods", label: "Research, prototyping, and service design" }
 ];
 
-const trustSignals = [
-  "MSc Human-Centered Computing",
-  "Background in IT support and mobile computing",
-  "UX research, prototyping, and service design",
-  "Available in Austria, Germany, and remote"
-];
-
 const timelineItems = [
   {
     period: "2012 - 2014",
@@ -56,30 +49,53 @@ const timelineItems = [
 ];
 
 const toolGroups = [
-  "Figma",
-  "ProtoPie",
-  "Android",
-  "Material Design",
-  "Human Interface Guidelines",
-  "Design Systems",
-  "MS Clarity",
-  "Firebase Analytics",
-  "Jira",
-  "Confluence",
-  "Miro",
-  "AI workflows"
+  {
+    title: "Research and validation",
+    tools: [
+      "User interviews",
+      "Surveys",
+      "Usability testing",
+      "Competitive analysis",
+      "Lyssna",
+      "MS Clarity",
+      "Firebase Analytics"
+    ]
+  },
+  {
+    title: "Product design methods",
+    tools: [
+      "Wireframing",
+      "Prototyping",
+      "Accessibility patterns",
+      "Design Systems",
+      "Material Design",
+      "Human Interface Guidelines",
+      "AI workflows"
+    ]
+  },
+  {
+    title: "Platforms and tools",
+    tools: [
+      "Figma",
+      "ProtoPie",
+      "Adobe XD",
+      "Android and iOS",
+      "Jira",
+      "Confluence",
+      "Miro"
+    ]
+  }
 ];
 
 const projectPreviews = [
   {
     title: "Travel booking platform",
     summary:
-      "Redesigned a travel booking flow to reduce decision overload across web and mobile.",
-    role: "UX Research, UI Design",
-    methods: "Journey mapping, wireframes, prototype",
-    outcome: "Identified 7 usability issues in testing",
+      "Responsible for UX/UI design across web, Android, and iOS travel booking products with more than 2M downloads, including a full redesign and relaunch of the outdated mobile app experience.",
+    role: "Senior Product Design",
+    outcome: "Best travel portal app at the German App Award 2026",
     tags: ["Interaction Design", "Mobile UX", "Prototyping"],
-    image: "/images/work/Frame 11414.png",
+    image: "/images/work/ab-in-den-urlaub.jpg",
     imageAlt: "Ab in den Urlaub web and mobile booking screens"
   },
   {
@@ -87,10 +103,9 @@ const projectPreviews = [
     summary:
       "Created a mobile-first product structure for creating, sharing, and joining challenges.",
     role: "Product Design, Mobile UX",
-    methods: "User flows, wireframes, prototype",
     outcome: "Created 3 user flows and 2 prototype iterations",
     tags: ["Service Design", "Mobile UX", "Interaction Design"],
-    image: "/images/work/chub.png",
+    image: "/images/work/project-lean.jpg",
     imageAlt: "Mobile challenge app screens"
   },
   {
@@ -98,21 +113,19 @@ const projectPreviews = [
     summary:
       "Designed an Android tour experience that makes location-based content easier to follow.",
     role: "UX Design, Android Development",
-    methods: "Prototype, usability review, mobile UI",
     outcome: "Improved navigation clarity before implementation",
     tags: ["Mobile UX", "Prototyping", "Usability Testing"],
-    image: "/images/work/gamification2.png",
+    image: "/images/work/project-gamification.jpg",
     imageAlt: "Gamified mobile tour interaction screens"
   },
   {
-    title: "Food delivery comparison",
+    title: "Websites for service professionals",
     summary:
-      "Explored a comparison experience for delivery options across multiple providers.",
-    role: "UX Research, Service Design",
-    methods: "Journey mapping, prototype, user testing",
-    outcome: "Tested with 5 users for comparison clarity",
-    tags: ["UX Research", "Service Design", "Mobile UX", "Usability Testing"],
-    visual: "delivery"
+      "Created clean, trustworthy websites and digital advice for actors, psychotherapists, and art crafters.",
+    role: "UX/UI Design, Web Consulting",
+    outcome: "Structured content, visual direction, and launch-ready web presence",
+    tags: ["Web Design", "UX Consulting", "Service Design", "Content Structure"],
+    visual: "websites"
   }
 ];
 
@@ -187,10 +200,6 @@ const featuredCaseStudy = {
     </aside>
   </section>
 
-  <section class="trust-strip" aria-label="Trust signals" data-reveal>
-    {trustSignals.map((signal) => <span>{signal}</span>)}
-  </section>
-
   <section id="about" class="about-section section-space" data-reveal>
     <div class="profile-photo-frame">
       <img src={profileImage} alt="Portrait of Laurenz Gebauer" class="profile-photo" loading="eager" />
@@ -235,8 +244,15 @@ const featuredCaseStudy = {
 
       <aside class="tool-panel">
         <p class="eyebrow">Tools and methods</p>
-        <div class="tool-cloud">
-          {toolGroups.map((tool) => <span>{tool}</span>)}
+        <div class="tool-groups">
+          {toolGroups.map((group) => (
+            <section class="tool-group" aria-label={group.title}>
+              <h3>{group.title}</h3>
+              <div class="tool-cloud">
+                {group.tools.map((tool) => <span>{tool}</span>)}
+              </div>
+            </section>
+          ))}
         </div>
       </aside>
     </div>
@@ -246,7 +262,7 @@ const featuredCaseStudy = {
     <div class="section-intro">
       <p class="eyebrow">Selected work</p>
       <h2>Selected UX/Product Design case studies</h2>
-      <p>Each project highlights the problem, my role, methods, and design outcomes.</p>
+      <p>Each project highlights the problem, my role, and design outcomes.</p>
     </div>
 
     <div class="project-grid">
@@ -255,6 +271,24 @@ const featuredCaseStudy = {
           {project.image ? (
             <div class="project-image-shell">
               <img src={project.image} alt={project.imageAlt} class="project-image" loading="lazy" />
+            </div>
+          ) : project.visual === "websites" ? (
+            <div class="project-image-shell project-visual-websites" aria-hidden="true">
+              <div class="website-preview">
+                <div class="website-nav">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="website-hero">
+                  <strong>Personal brand website</strong>
+                  <p>Clear positioning, calm content structure, and confident service presentation.</p>
+                </div>
+                <div class="website-grid">
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
             </div>
           ) : (
             <div class="project-image-shell project-visual-delivery" aria-hidden="true">
@@ -278,10 +312,6 @@ const featuredCaseStudy = {
               <div>
                 <dt>Role</dt>
                 <dd>{project.role}</dd>
-              </div>
-              <div>
-                <dt>Methods</dt>
-                <dd>{project.methods}</dd>
               </div>
               <div>
                 <dt>Outcome</dt>
