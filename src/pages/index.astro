@@ -95,7 +95,7 @@ const projectPreviews = [
     role: "Senior Product Design",
     outcome: "Best travel portal app at the German App Award 2026",
     tags: ["Interaction Design", "Mobile UX", "Prototyping"],
-    image: "/images/work/aidu.png",
+    image: "/images/work/ab-in-den-urlaub.jpg",
     imageAlt: "Ab in den Urlaub web and mobile booking screens"
   },
   {
@@ -105,7 +105,7 @@ const projectPreviews = [
     role: "Product Design, Mobile UX",
     outcome: "Created 3 user flows and 2 prototype iterations",
     tags: ["Service Design", "Mobile UX", "Interaction Design"],
-    image: "/images/work/chub.png",
+    image: "/images/work/challenge.png",
     imageAlt: "Mobile challenge app screens"
   },
   {
@@ -115,8 +115,9 @@ const projectPreviews = [
     role: "UX Design, Android Development",
     outcome: "Improved navigation clarity before implementation",
     tags: ["Mobile UX", "Prototyping", "Usability Testing"],
-    image: "/images/work/gami.png",
-    imageAlt: "Gamified mobile tour interaction screens"
+    image: "/images/work/project-gamification.jpg",
+    imageAlt: "Gamified mobile tour interaction screens",
+    imageClass: "project-image--tour"
   },
   {
     title: "Websites for service professionals",
@@ -270,7 +271,12 @@ const featuredCaseStudy = {
         <article class="project-card">
           {project.image ? (
             <div class="project-image-shell">
-              <img src={project.image} alt={project.imageAlt} class="project-image" loading="lazy" />
+              <img
+                src={project.image}
+                alt={project.imageAlt}
+                class={`project-image ${project.imageClass ?? ""}`}
+                loading="lazy"
+              />
             </div>
           ) : project.visual === "websites" ? (
             <div class="project-image-shell project-visual-websites" aria-hidden="true">
