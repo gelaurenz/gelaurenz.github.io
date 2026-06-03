@@ -116,7 +116,8 @@ const projectPreviews = [
     outcome: "Improved navigation clarity before implementation",
     tags: ["Mobile UX", "Prototyping", "Usability Testing"],
     image: "/images/work/gami.png",
-    imageAlt: "Gamified mobile tour interaction screens"
+    imageAlt: "Gamified mobile tour interaction screens",
+    imageClass: "project-image--tour"
   },
   {
     title: "Websites for service professionals",
@@ -273,7 +274,7 @@ const featuredCaseStudy = {
               <img
                 src={project.image}
                 alt={project.imageAlt}
-                class="project-image"
+                class={`project-image ${project.imageClass ?? ""}`}
                 loading="lazy"
               />
             </div>
