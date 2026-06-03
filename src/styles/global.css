@@ -575,6 +575,55 @@ h3 {
   filter: drop-shadow(0 16px 20px rgba(16, 24, 39, 0.12));
 }
 
+.project-image-button {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  color: inherit;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.project-image-button:focus-visible {
+  outline: 3px solid rgba(73, 199, 220, 0.5);
+  outline-offset: 4px;
+}
+
+.project-image-button .project-image {
+  grid-area: 1 / 1;
+}
+
+.project-image-hint {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(4px);
+  padding: 8px 11px;
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  border-radius: 999px;
+  color: #ffffff;
+  background: rgba(7, 20, 31, 0.72);
+  box-shadow: 0 10px 24px rgba(16, 24, 39, 0.2);
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.project-image-button:hover .project-image-hint,
+.project-image-button:focus-visible .project-image-hint {
+  opacity: 1;
+  transform: none;
+}
+
 .project-image--tour {
   transform: translate(-4%, -8%) scale(0.8);
   transform-origin: center;
@@ -963,6 +1012,71 @@ h3 {
 .unlock-dialog::backdrop {
   background: rgba(7, 12, 18, 0.46);
   backdrop-filter: blur(8px);
+}
+
+.image-lightbox {
+  width: min(calc(100% - 28px), 1180px);
+  max-height: min(88vh, 860px);
+  padding: 0;
+  border: 0;
+  border-radius: 28px;
+  background: transparent;
+}
+
+.image-lightbox::backdrop {
+  background: rgba(7, 12, 18, 0.68);
+  backdrop-filter: blur(10px);
+}
+
+.image-lightbox figure {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 28px;
+  background:
+    linear-gradient(rgba(16, 24, 39, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 24, 39, 0.035) 1px, transparent 1px),
+    rgba(248, 252, 253, 0.96);
+  background-size: 32px 32px, 32px 32px, auto;
+  box-shadow: 0 34px 90px rgba(7, 12, 18, 0.34);
+}
+
+.image-lightbox img {
+  width: 100%;
+  max-height: min(72vh, 700px);
+  border-radius: 20px;
+  object-fit: contain;
+}
+
+.image-lightbox figcaption {
+  color: var(--muted);
+  font-size: 0.94rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.image-lightbox-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 2;
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.62);
+  border-radius: 999px;
+  color: #ffffff;
+  background: rgba(7, 20, 31, 0.78);
+  box-shadow: 0 14px 32px rgba(16, 24, 39, 0.22);
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.image-lightbox-close:focus-visible {
+  outline: 3px solid rgba(73, 199, 220, 0.48);
+  outline-offset: 3px;
 }
 
 .unlock-card {
@@ -1405,6 +1519,26 @@ h3 {
   .project-image-shell {
     aspect-ratio: 4 / 3;
     padding: 16px;
+  }
+
+  .image-lightbox {
+    width: min(calc(100% - 18px), 1180px);
+    max-height: 90vh;
+  }
+
+  .image-lightbox figure {
+    padding: 10px;
+    border-radius: 20px;
+  }
+
+  .image-lightbox img {
+    max-height: 76vh;
+    border-radius: 15px;
+  }
+
+  .image-lightbox-close {
+    top: 12px;
+    right: 12px;
   }
 
   .project-body {
