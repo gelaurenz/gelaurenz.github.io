@@ -575,6 +575,11 @@ h3 {
   filter: drop-shadow(0 16px 20px rgba(16, 24, 39, 0.12));
 }
 
+.project-image--tour {
+  transform: translate(-3%, -5%) scale(0.9);
+  transform-origin: center;
+}
+
 .project-visual-delivery {
   position: relative;
   display: grid;
