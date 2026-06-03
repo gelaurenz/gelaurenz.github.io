@@ -101,9 +101,9 @@ const projectPreviews = [
   {
     title: "Online challenge platform",
     summary:
-      "Designed and developed a collaborative platform for creating, sharing, and participating in online challenges, contributing to UX strategy, interaction design, and implementation.",
-    role: "Product Design, Mobile UX",
-    outcome: "Cross-Platform App",
+      "Created a mobile-first product structure for creating, sharing, and joining challenges.",
+    role: "Product Design, Mobile Development",
+    outcome: "Android app to cross-platform app",
     tags: ["Service Design", "Mobile UX", "Interaction Design"],
     image: "/images/work/challenge.png",
     imageAlt: "Mobile challenge app screens"
@@ -111,10 +111,9 @@ const projectPreviews = [
   {
     title: "Interactive tour application",
     summary:
-      "Designed and developed a mobile application for interactive tours with a strong
-focus on intuitive Android user experiences.",
+      "Designed and developed a mobile application for interactive tours with a strong focus on intuitive Android user experiences.",
     role: "UX Design, Android Development",
-    outcome: "Android App",
+    outcome: "Improved navigation clarity before implementation",
     tags: ["Mobile UX", "Prototyping", "Usability Testing"],
     image: "/images/work/gami.png",
     imageAlt: "Gamified mobile tour interaction screens",
@@ -158,19 +157,6 @@ const processAreas = [
   }
 ];
 
-const featuredCaseStudy = {
-  title: "Food Delivery Comparison Experience",
-  summary:
-    "A mobile-first concept for comparing food delivery services by price, delivery time, fees, and usability.",
-  proofPoints: ["5 user tests", "4 comparison criteria", "2 prototype iterations"],
-  context: "Users often compare delivery options manually across multiple apps.",
-  problem:
-    "Important decision factors such as fees, delivery time, and availability are hard to compare quickly.",
-  process: "Mapped the comparison journey, designed mobile flows, and tested a clickable prototype.",
-  outcome: "Improved clarity around restaurant and delivery option comparison.",
-  href: "/work/school-of-ux-booking/",
-  tags: ["UX Research", "Service Design", "Mobile UX", "Prototyping"]
-};
 ---
 
 <BaseLayout
@@ -299,7 +285,7 @@ const featuredCaseStudy = {
                   <span></span>
                 </div>
                 <div class="website-hero">
-                  <strong>Personal brand website</strong>
+                  <strong>Personal brand websites</strong>
                   <p>Clear positioning, calm content structure, and confident service presentation.</p>
                 </div>
                 <div class="website-grid">
@@ -344,59 +330,6 @@ const featuredCaseStudy = {
         </article>
       ))}
     </div>
-  </section>
-
-  <section class="case-study-preview section-space" data-reveal>
-    <div class="featured-case-copy">
-      <p class="eyebrow">Featured case study</p>
-      <h2>{featuredCaseStudy.title}</h2>
-      <p>{featuredCaseStudy.summary}</p>
-
-      <div class="proof-point-grid" aria-label="Featured case study proof points">
-        {featuredCaseStudy.proofPoints.map((proof) => <span>{proof}</span>)}
-      </div>
-
-      <div class="featured-case-grid">
-        <article>
-          <span>Context</span>
-          <p>{featuredCaseStudy.context}</p>
-        </article>
-        <article>
-          <span>Problem</span>
-          <p>{featuredCaseStudy.problem}</p>
-        </article>
-        <article>
-          <span>Process</span>
-          <p>{featuredCaseStudy.process}</p>
-        </article>
-        <article>
-          <span>Outcome</span>
-          <p>{featuredCaseStudy.outcome}</p>
-        </article>
-      </div>
-    </div>
-
-    <aside class="featured-case-aside">
-      <div class="featured-preview" aria-hidden="true">
-        <div class="featured-phone">
-          <span>Compare</span>
-          <strong>Best delivery match</strong>
-          <div class="featured-result is-active">
-            <small>Wolt</small>
-            <b>24 min &middot; EUR 15.80</b>
-          </div>
-          <div class="featured-result">
-            <small>Lieferando</small>
-            <b>31 min &middot; EUR 13.40</b>
-          </div>
-        </div>
-      </div>
-      <ul class="tag-list" aria-label="Featured case study tags">
-        {featuredCaseStudy.tags.map((tag) => <li>{tag}</li>)}
-      </ul>
-
-      <a href={featuredCaseStudy.href} class="button button-primary">Read case study</a>
-    </aside>
   </section>
 
   <section id="approach" class="approach-section section-space" data-reveal>
